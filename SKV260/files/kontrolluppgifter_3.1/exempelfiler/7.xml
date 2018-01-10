@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Skatteverket xmlns="http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/3.1"
+              xmlns:gm="http://xmls.skatteverket.se/se/skatteverket/ai/gemensamt/infoForBeskattning/3.1"
+              xmlns:ku="http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/3.1"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              omrade="Kontrolluppgifter"
+              xsi:schemaLocation="http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/3.1
+http://xmls.skatteverket.se/se/skatteverket/ai/kontrolluppgift/instans/Kontrolluppgifter_3.1.xsd ">
+  <ku:Avsandare>
+    <ku:Programnamn>KUfilsprogrammet</ku:Programnamn>
+    <ku:Organisationsnummer>162234567895</ku:Organisationsnummer>
+    <ku:TekniskKontaktperson>
+      <ku:Namn>John Doe</ku:Namn>
+      <ku:Telefon>+46881234567</ku:Telefon>
+      <ku:Epostadress>siv.karlsson@aktiebolagetab.se</ku:Epostadress>
+      <ku:Utdelningsadress1>Artellerigatan 11</ku:Utdelningsadress1>
+      <ku:Postnummer>62145</ku:Postnummer>
+      <ku:Postort>Visby</ku:Postort>
+    </ku:TekniskKontaktperson>
+    <ku:Skapad>2017-06-07T21:32:52</ku:Skapad>
+  </ku:Avsandare>
+
+  <ku:Blankettgemensamt>
+    <ku:Uppgiftslamnare>
+      <ku:UppgiftslamnarePersOrgnr>165599990602</ku:UppgiftslamnarePersOrgnr>
+      <ku:Kontaktperson>
+        <ku:Namn>John Doe</ku:Namn>
+        <ku:Telefon>+46812345678</ku:Telefon>
+        <ku:Epostadress>siv.karlsson@sonjasfrohandel.se</ku:Epostadress>
+        <ku:Sakomrade>konton</ku:Sakomrade>
+      </ku:Kontaktperson>
+    </ku:Uppgiftslamnare>
+  </ku:Blankettgemensamt>
+
+  <!-- Kontrolluppgift 1 -->
+  <ku:Blankett nummer="2323">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU20>
+        <ku:AvdragenSkatt faltkod="001">10000</ku:AvdragenSkatt>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Ranteinkomst faltkod="500">20000</ku:Ranteinkomst>
+        <ku:RanteinkomstEjKonto faltkod="503">40000</ku:RanteinkomstEjKonto>
+        <ku:AnnanInkomst faltkod="504">15000</ku:AnnanInkomst>
+        <ku:Specifikationsnummer faltkod="570">617</ku:Specifikationsnummer>
+        <ku:InkomsttagareKU20>
+          <ku:Inkomsttagare faltkod="215">190503018459</ku:Inkomsttagare>
+        </ku:InkomsttagareKU20>
+        <ku:UppgiftslamnareKU20>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU20>
+      </ku:KU20>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 2 -->
+  <ku:Blankett nummer="2320">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU21>
+        <ku:AvdragenSkatt faltkod="001">1000</ku:AvdragenSkatt>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:AnnanInkomst faltkod="504">5000</ku:AnnanInkomst>
+        <ku:RantaFordringsratter faltkod="520">3000</ku:RantaFordringsratter>
+        <ku:Specifikationsnummer faltkod="570">60</ku:Specifikationsnummer>
+        <ku:ISIN faltkod="572">SE0005624905</ku:ISIN>
+        <ku:InkomsttagareKU21>
+          <ku:Inkomsttagare faltkod="215">192012049199</ku:Inkomsttagare>
+        </ku:InkomsttagareKU21>
+        <ku:UppgiftslamnareKU21>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU21>
+      </ku:KU21>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 3 -->
+  <ku:Blankett nummer="2320">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU21>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:OkandVarde faltkod="599">1</ku:OkandVarde>
+        <ku:Specifikationsnummer faltkod="570">60</ku:Specifikationsnummer>
+        <ku:ISIN faltkod="572">SE0000108656</ku:ISIN>
+        <ku:InkomsttagareKU21>
+          <ku:Inkomsttagare faltkod="215">192012049199</ku:Inkomsttagare>
+        </ku:InkomsttagareKU21>
+        <ku:UppgiftslamnareKU21>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU21>
+      </ku:KU21>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 4 -->
+  <ku:Blankett nummer="2336">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU25>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:AvdragsgillRanta faltkod="540">2015</ku:AvdragsgillRanta>
+        <ku:Specifikationsnummer faltkod="570">371</ku:Specifikationsnummer>
+        <ku:UppgiftslamnareKU25>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU25>
+        <ku:InkomsttagareKU25>
+          <ku:Inkomsttagare faltkod="215">193211056969</ku:Inkomsttagare>
+        </ku:InkomsttagareKU25>
+      </ku:KU25>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 5 -->
+  <ku:Blankett nummer="2312">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU30>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">808</ku:Specifikationsnummer>
+        <ku:Schablonintakt faltkod="815">99900</ku:Schablonintakt>
+        <ku:Kontonummer faltkod="817">28110706.01</ku:Kontonummer>
+        <ku:UppgiftslamnareKU30>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU30>
+        <ku:InkomsttagareKU30>
+          <ku:Inkomsttagare faltkod="215">193601286499</ku:Inkomsttagare>
+        </ku:InkomsttagareKU30>
+      </ku:KU30>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 6 -->
+  <ku:Blankett nummer="2322">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU31>
+        <ku:AvdragenSkatt faltkod="001">9000</ku:AvdragenSkatt>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">962</ku:Specifikationsnummer>
+        <ku:ISIN faltkod="572">SE0000101032</ku:ISIN>
+        <ku:UtbetaldUtdelning faltkod="574">30000</ku:UtbetaldUtdelning>
+        <ku:InkomsttagareKU31>
+          <ku:Inkomsttagare faltkod="215">193804139149</ku:Inkomsttagare>
+        </ku:InkomsttagareKU31>
+        <ku:UppgiftslamnareKU31>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU31>
+      </ku:KU31>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 7 -->
+  <ku:Blankett nummer="2318">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU32>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">185</ku:Specifikationsnummer>
+        <ku:VPNamn faltkod="571">Telenor</ku:VPNamn>
+        <ku:ISIN faltkod="572">NO0010063308</ku:ISIN>
+        <ku:AntalAvyttrade faltkod="576">100</ku:AntalAvyttrade>
+        <ku:ErhallenErsattning faltkod="810">198000</ku:ErhallenErsattning>
+        <ku:InkomsttagareKU32>
+          <ku:Inkomsttagare faltkod="215">194709183109</ku:Inkomsttagare>
+        </ku:InkomsttagareKU32>
+        <ku:UppgiftslamnareKU32>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU32>
+      </ku:KU32>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 8 -->
+  <ku:Blankett nummer="2315">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU34>
+        <ku:InkomsttagareKU34>
+          <ku:Inkomsttagare faltkod="215">195111232079</ku:Inkomsttagare>
+          <ku:Fornamn faltkod="216">Nisse</ku:Fornamn>
+          <ku:Efternamn faltkod="217">Nilsson</ku:Efternamn>
+          <ku:Gatuadress faltkod="218">Vägen 8</ku:Gatuadress>
+          <ku:Postnummer faltkod="219">62145</ku:Postnummer>
+          <ku:Postort faltkod="220">Staden</ku:Postort>
+        </ku:InkomsttagareKU34>
+        <ku:UppgiftslamnareKU34>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU34>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">147</ku:Specifikationsnummer>
+        <ku:ISIN faltkod="572">SE0005966504</ku:ISIN>
+        <ku:AntalKontrakt faltkod="578">100</ku:AntalKontrakt>
+        <ku:ErhallenErsattning faltkod="810">198000</ku:ErhallenErsattning>
+        <ku:TypAvOption faltkod="812">U</ku:TypAvOption>
+      </ku:KU34>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 9 -->
+  <ku:Blankett nummer="2325">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU35>
+        <ku:InkomsttagareKU35>
+          <ku:Inkomsttagare faltkod="215">196105273269</ku:Inkomsttagare>
+        </ku:InkomsttagareKU35>
+        <ku:UppgiftslamnareKU35>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU35>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Depanummer faltkod="523">405</ku:Depanummer>
+        <ku:AndelAvDepan faltkod="524">40.50</ku:AndelAvDepan>
+        <ku:Specifikationsnummer faltkod="570">878</ku:Specifikationsnummer>
+        <ku:VPNamn faltkod="571">Värdeterminen</ku:VPNamn>
+        <ku:AntalKontrakt faltkod="578">10</ku:AntalKontrakt>
+        <ku:ErhallenErsattning faltkod="810">198000</ku:ErhallenErsattning>
+        <ku:ErlagdErsattning faltkod="811">98000</ku:ErlagdErsattning>
+        <ku:Redovisningsmetod faltkod="814">B</ku:Redovisningsmetod>
+      </ku:KU35>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 10 -->
+  <ku:Blankett nummer="2339">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU40>
+        <ku:InkomsttagareKU40>
+          <ku:Inkomsttagare faltkod="215">197603032389</ku:Inkomsttagare>
+        </ku:InkomsttagareKU40>
+        <ku:UppgiftslamnareKU40>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU40>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">356</ku:Specifikationsnummer>
+        <ku:ISIN faltkod="572">SE0000307009</ku:ISIN>
+        <ku:Kapitalvinst faltkod="600">100000</ku:Kapitalvinst>
+      </ku:KU40>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 11 -->
+  <ku:Blankett nummer="2313">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU41>
+        <ku:InkomsttagareKU41>
+          <ku:Inkomsttagare faltkod="215">199809189815</ku:Inkomsttagare>
+        </ku:InkomsttagareKU41>
+        <ku:UppgiftslamnareKU41>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU41>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">719</ku:Specifikationsnummer>
+        <ku:VPNamn faltkod="571">Andorrafonden</ku:VPNamn>
+        <ku:ISIN faltkod="572">AD0000307009</ku:ISIN>
+        <ku:Schablonintakt faltkod="815">100000</ku:Schablonintakt>
+      </ku:KU41>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 12 -->
+  <ku:Blankett nummer="2338">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU50>
+        <ku:UppgiftslamnareKU50>
+          <ku:LandskodUL faltkod="075">GB</ku:LandskodUL>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+          <ku:ULUtlandsktOrgnr faltkod="506">457000765</ku:ULUtlandsktOrgnr>
+        </ku:UppgiftslamnareKU50>
+        <ku:InkomsttagareKU50>
+          <ku:Inkomsttagare faltkod="215">192012049199</ku:Inkomsttagare>
+        </ku:InkomsttagareKU50>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">899</ku:Specifikationsnummer>
+        <ku:BetaldPremie faltkod="620">20100</ku:BetaldPremie>
+      </ku:KU50>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 13 -->
+  <ku:Blankett nummer="2319">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU71>
+        <ku:InkomsttagareKU71>
+          <ku:Inkomsttagare faltkod="215">192107139269</ku:Inkomsttagare>
+        </ku:InkomsttagareKU71>
+        <ku:UppgiftslamnareKU71>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU71>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">353</ku:Specifikationsnummer>
+        <ku:Kontoslag faltkod="740">S</ku:Kontoslag>
+        <ku:UtbetaltBelopp faltkod="744">367000</ku:UtbetaltBelopp>
+      </ku:KU71>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 14 -->
+  <ku:Blankett nummer="2321">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU72>
+        <ku:InkomsttagareKU72>
+          <ku:Inkomsttagare faltkod="215">193211056969</ku:Inkomsttagare>
+        </ku:InkomsttagareKU72>
+        <ku:UppgiftslamnareKU72>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU72>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">123</ku:Specifikationsnummer>
+        <ku:Kontoslag faltkod="740">U</ku:Kontoslag>
+        <ku:InsattBelopp faltkod="745">109700</ku:InsattBelopp>
+        <ku:DatumInsattning faltkod="746">20171012</ku:DatumInsattning>
+      </ku:KU72>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 15 -->
+  <ku:Blankett nummer="2329">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU80>
+        <ku:UppgiftslamnareKU80>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU80>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">492</ku:Specifikationsnummer>
+        <ku:Belopp faltkod="660">325000</ku:Belopp>
+        <ku:LandskodBetalning faltkod="662">FR</ku:LandskodBetalning>
+        <ku:Betalningsdatum faltkod="663">20170211</ku:Betalningsdatum>
+        <ku:Valutakod faltkod="664">EUR</ku:Valutakod>
+        <ku:InkomsttagareKU80>
+          <ku:Inkomsttagare faltkod="215">193804139149</ku:Inkomsttagare>
+        </ku:InkomsttagareKU80>
+      </ku:KU80>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+  <!-- Kontrolluppgift 16 -->
+  <ku:Blankett nummer="2328">
+    <ku:Arendeinformation>
+      <ku:Arendeagare>165599990602</ku:Arendeagare>
+      <ku:Period>2017</ku:Period>
+    </ku:Arendeinformation>
+    <ku:Blankettinnehall>
+      <ku:KU81>
+        <ku:UppgiftslamnareKU81>
+          <ku:UppgiftslamnarId faltkod="201">165599990602</ku:UppgiftslamnarId>
+        </ku:UppgiftslamnareKU81>
+        <ku:Inkomstar faltkod="203">2017</ku:Inkomstar>
+        <ku:Specifikationsnummer faltkod="570">45</ku:Specifikationsnummer>
+        <ku:Belopp faltkod="660">181000</ku:Belopp>
+        <ku:Betalningskod faltkod="661">101</ku:Betalningskod>
+        <ku:LandskodBetalning faltkod="662">MX</ku:LandskodBetalning>
+        <ku:Betalningsdatum faltkod="663">20170611</ku:Betalningsdatum>
+        <ku:Valutakod faltkod="664">USD</ku:Valutakod>
+        <ku:NamnBetalningsmottagare faltkod="671">Bo Olsson</ku:NamnBetalningsmottagare>
+        <ku:InkomsttagareKU81>
+          <ku:Inkomsttagare faltkod="215">194709183109</ku:Inkomsttagare>
+        </ku:InkomsttagareKU81>
+      </ku:KU81>
+    </ku:Blankettinnehall>
+  </ku:Blankett>
+</Skatteverket>

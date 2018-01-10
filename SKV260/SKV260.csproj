@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5ED63EB5-8341-41E2-B7A8-44304A7403D9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SKV260</RootNamespace>
+    <AssemblyName>SKV260</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arendeinformation.cs" />
+    <Compile Include="Avsandare.cs" />
+    <Compile Include="Blankett.cs" />
+    <Compile Include="DirectoryHelper.cs" />
+    <Compile Include="Kontaktperson.cs" />
+    <Compile Include="Kontrolluppgifter\Blankettnummer.cs" />
+    <Compile Include="Kontrolluppgifter\Fält.cs" />
+    <Compile Include="Kontrolluppgifter\KU.cs" />
+    <Compile Include="Kontrolluppgifter\KU20.cs" />
+    <Compile Include="Kontrolluppgifter\KU31.cs" />
+    <Compile Include="Kontrolluppgifter\KU32.cs" />
+    <Compile Include="Kontrolluppgifter\KUId.cs" />
+    <Compile Include="Kontrolluppgifter\KUGenerateVisitor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TekniskKontaktperson.cs" />
+    <Compile Include="Uppgiftslamnare.cs" />
+    <Compile Include="ValidationResultWithContext.cs" />
+    <Compile Include="IdentitetAttribute.cs" />
+    <Compile Include="XEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="files\kontrolluppgifter_3.1\instans\Kontrolluppgifter_3.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="files\kontrolluppgifter_3.1\komponent\gemensamt\SKV_COMMON_3.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="files\kontrolluppgifter_3.1\komponent\Kontrolluppgifter_COMPONENT_3.1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\kontrolluppgifter_3.1\exempelfiler\4.xml" />
+    <Content Include="files\kontrolluppgifter_3.1\exempelfiler\7.xml" />
+    <Content Include="files\kontrolluppgifter_3.1\instans\Kontrolluppgifter_3.1.xsl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
