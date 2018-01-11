@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 
 namespace SKV260.Kontrolluppgifter
 {
@@ -13,7 +8,7 @@ namespace SKV260.Kontrolluppgifter
         /// <summary>
         /// Avdragen preliminär skatt eller avdragen skatt för SINK. 
         /// </summary>
-        public Fält AvdragenSkatt { get; } = new Fält(001);
+        public Fält AvdragenSkatt { get; } = new Fält(1);
 
         /// <summary>
         /// Här lämnas uppgift om tillgodoräknad eller utbetald ränta på konto i bank m.m.

@@ -1,13 +1,5 @@
 ﻿using SKV260.Kontrolluppgifter;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Linq;
-using System.Xml.Schema;
 
 namespace SKV260
 {
@@ -51,6 +43,23 @@ namespace SKV260
             ku20.AnnanInkomst.Value = 15000;
 
             x.Blanketter.Add(ku20);
+
+            var ku31 = x.Create<KU31>(uppgiftslamnare, new Fält(215, "198911092487"), 1);
+
+            ku31.AvdragenSkatt.Value = 9000;
+            ku31.ISIN.Value = "SE0000101032";
+            ku31.UtbetaldUtdelning.Value = 30000;
+
+            x.Blanketter.Add(ku31);
+
+            var ku32 = x.Create<KU32>(uppgiftslamnare, new Fält(215, "195803024768"), 1);
+
+            ku32.VPNamn.Value = "Telenor";
+            ku32.ISIN.Value = "SE0000101032";
+            ku32.AntalAvyttrade.Value = 100;
+            ku32.ErhallenErsattning.Value = 198000;
+
+            x.Blanketter.Add(ku32);
 
             var doc = x.Generate();
 

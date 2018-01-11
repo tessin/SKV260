@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 
 namespace SKV260.Kontrolluppgifter
 {
@@ -13,6 +8,8 @@ namespace SKV260.Kontrolluppgifter
         /// Identitet.
         /// </summary>
         public KUId Id { get; }
+
+        public Fält Borttag { get; } = new Fält(55);
 
         protected KU(string typ, Uppgiftslamnare uppgiftslamnare, int inkomstar, Fält inkomsttagare, long specifikationsnummer)
         {

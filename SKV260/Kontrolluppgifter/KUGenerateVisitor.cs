@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace SKV260.Kontrolluppgifter
@@ -117,14 +112,41 @@ namespace SKV260.Kontrolluppgifter
             return el;
         }
 
-        public virtual XElement Visit(KU31 kU31)
+        public virtual XElement Visit(KU31 ku31)
         {
-            throw new NotImplementedException();
+            var el = new XElement(_ku + "KU31",
+                CreateValue("AvdragenSkatt", ku31.AvdragenSkatt),
+                CreateValue("Inkomstar", ku31.Id.Inkomstar),
+                CreateValue("Specifikationsnummer", ku31.Id.Specifikationsnummer),
+                CreateValue("ISIN", ku31.ISIN),
+                CreateValue("UtbetaldUtdelning", ku31.UtbetaldUtdelning),
+                    new XElement(_ku + "InkomsttagareKU31",
+                        CreateValue("Inkomsttagare", ku31.Id.Inkomsttagare)
+                    ),
+                    new XElement(_ku + "UppgiftslamnareKU31",
+                        CreateValue("UppgiftslamnarId", ku31.Id.UppgiftslamnarId)
+                    )
+                );
+            return el;
         }
 
-        public virtual XElement Visit(KU32 kU32)
+        public virtual XElement Visit(KU32 ku32)
         {
-            throw new NotImplementedException();
+            var el = new XElement(_ku + "KU32",
+                CreateValue("Inkomstar", ku32.Id.Inkomstar),
+                CreateValue("Specifikationsnummer", ku32.Id.Specifikationsnummer),
+                CreateValue("VPNamn", ku32.VPNamn),
+                CreateValue("ISIN", ku32.ISIN),
+                CreateValue("AntalAvyttrade", ku32.AntalAvyttrade),
+                CreateValue("ErhallenErsattning", ku32.ErhallenErsattning),
+                    new XElement(_ku + "InkomsttagareKU32",
+                        CreateValue("Inkomsttagare", ku32.Id.Inkomsttagare)
+                    ),
+                    new XElement(_ku + "UppgiftslamnareKU32",
+                        CreateValue("UppgiftslamnarId", ku32.Id.UppgiftslamnarId)
+                    )
+                );
+            return el;
         }
     }
 }

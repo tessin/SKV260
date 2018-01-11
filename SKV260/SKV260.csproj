@@ -75,7 +75,6 @@
     <None Include="files\kontrolluppgifter_3.1\komponent\Kontrolluppgifter_COMPONENT_3.1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="files\kontrolluppgifter_3.1\exempelfiler\4.xml" />
