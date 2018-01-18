@@ -27,22 +27,23 @@ namespace SKV260
 
         public void Init()
         {
-            var dir = DirectoryHelper.FindFirst(_version);
-            if (dir == null)
-            {
-                throw new InvalidOperationException($"cannot find database for '{_version}'");
-            }
-
             if (_xmlSettings.Schemas.Count > 0)
             {
                 return;
             }
 
-            foreach (var xsd in Directory.EnumerateFiles(dir, "*.xsd", SearchOption.AllDirectories))
+            var assembly = this.GetType().Assembly;
+            foreach (var resourceName in assembly.GetManifestResourceNames())
             {
-                using (var inputFileStream = File.OpenRead(xsd))
+                if (resourceName.EndsWith(".xsd"))
                 {
-                    _xmlSettings.Schemas.Add(XmlSchema.Read(inputFileStream, null));
+                    if (resourceName.Contains(_version))
+                    {
+                        using (var inputFileStream = assembly.GetManifestResourceStream(resourceName))
+                        {
+                            _xmlSettings.Schemas.Add(XmlSchema.Read(inputFileStream, null));
+                        }
+                    }
                 }
             }
         }

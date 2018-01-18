@@ -8,6 +8,10 @@ Det här är ett .NET lib som hjälper dig med elektronisk redovisning av kontrollu
 
 ----
 
+# Exempel
+
+Titta närmare på `Program.cs` is mappen SKV260 eller xml2xlsx för mer information.
+
 # Bra att veta
 
 - Skatteverket använder [12-siffriga organisationsnummer](https://sv.wikipedia.org/wiki/Organisationsnummer#12-siffriga_organisationsnummer). 

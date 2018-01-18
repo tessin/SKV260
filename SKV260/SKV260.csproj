@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>$(SolutionDir)\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>$(SolutionDir)\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -66,15 +66,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="files\kontrolluppgifter_3.1\instans\Kontrolluppgifter_3.1.xsd">
+    <EmbeddedResource Include="files\kontrolluppgifter_3.1\instans\Kontrolluppgifter_3.1.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="files\kontrolluppgifter_3.1\komponent\gemensamt\SKV_COMMON_3.1.xsd">
+    </EmbeddedResource>
+    <EmbeddedResource Include="files\kontrolluppgifter_3.1\komponent\gemensamt\SKV_COMMON_3.1.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="files\kontrolluppgifter_3.1\komponent\Kontrolluppgifter_COMPONENT_3.1.xsd">
+    </EmbeddedResource>
+    <EmbeddedResource Include="files\kontrolluppgifter_3.1\komponent\Kontrolluppgifter_COMPONENT_3.1.xsd">
       <SubType>Designer</SubType>
-    </None>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="files\kontrolluppgifter_3.1\exempelfiler\4.xml" />

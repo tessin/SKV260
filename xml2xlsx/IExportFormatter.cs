@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace xml2xlsx
+namespace SKV260
 {
     public interface IExportFormatter
     {
