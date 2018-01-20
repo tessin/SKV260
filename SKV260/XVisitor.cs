@@ -1,16 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Xml.Linq;
+using SKV260.Kontrolluppgifter;
 
-namespace SKV260.Kontrolluppgifter
+namespace SKV260
 {
-    public class KUGenerateVisitor
+    public class XVisitor
     {
         protected readonly XNamespace _ku;
 
         public List<ValidationResultWithContext> ValidationResults { get; set; } = new List<ValidationResultWithContext>();
 
-        public KUGenerateVisitor(XNamespace ku)
+        public XVisitor(XNamespace ku)
         {
             _ku = ku;
         }
@@ -82,70 +84,55 @@ namespace SKV260.Kontrolluppgifter
                     new XElement(_ku + "Period", blankett.Arendeinformation.Period)
                 ),
                 new XElement(_ku + "Blankettinnehall",
-                    blankett.Blankettinnehall.Accept(this)
+                    CreateBlankettinnehall(blankett.Blankettinnehall)
                 )
             );
             return el;
         }
 
-        protected XElement CreateValue(string name, Fält fält)
+        protected XElement CreateValue(Fält fält)
         {
-            return new XElement(_ku + name, new XAttribute("faltkod", fält.Key.ToString("000", CultureInfo.InvariantCulture)), fält.Value);
+            return new XElement(_ku + fält.Key.ToString(), new XAttribute("faltkod", ((int)fält.Key).ToString("000", CultureInfo.InvariantCulture)), fält.Value);
         }
 
-        public virtual XElement Visit(KU20 ku20)
+        private XElement CreateBlankettinnehall(KU blankettinnehall)
         {
-            var el = new XElement(_ku + "KU20",
-                CreateValue("AvdragenSkatt", ku20.AvdragenSkatt),
-                CreateValue("Inkomstar", ku20.Id.Inkomstar),
-                CreateValue("Ranteinkomst", ku20.Ranteinkomst),
-                CreateValue("RanteinkomstEjKonto", ku20.RanteinkomstEjKonto),
-                CreateValue("AnnanInkomst", ku20.AnnanInkomst),
-                CreateValue("Specifikationsnummer", ku20.Id.Specifikationsnummer),
-                    new XElement(_ku + "InkomsttagareKU20",
-                        CreateValue("Inkomsttagare", ku20.Id.Inkomsttagare)
-                    ),
-                    new XElement(_ku + "UppgiftslamnareKU20",
-                        CreateValue("UppgiftslamnarId", ku20.Id.UppgiftslamnarId)
-                    )
-                );
-            return el;
-        }
+            var id = blankettinnehall.GetId();
 
-        public virtual XElement Visit(KU31 ku31)
-        {
-            var el = new XElement(_ku + "KU31",
-                CreateValue("AvdragenSkatt", ku31.AvdragenSkatt),
-                CreateValue("Inkomstar", ku31.Id.Inkomstar),
-                CreateValue("Specifikationsnummer", ku31.Id.Specifikationsnummer),
-                CreateValue("ISIN", ku31.ISIN),
-                CreateValue("UtbetaldUtdelning", ku31.UtbetaldUtdelning),
-                    new XElement(_ku + "InkomsttagareKU31",
-                        CreateValue("Inkomsttagare", ku31.Id.Inkomsttagare)
-                    ),
-                    new XElement(_ku + "UppgiftslamnareKU31",
-                        CreateValue("UppgiftslamnarId", ku31.Id.UppgiftslamnarId)
-                    )
-                );
-            return el;
-        }
+            var layout = blankettinnehall.GetLayout();
 
-        public virtual XElement Visit(KU32 ku32)
-        {
-            var el = new XElement(_ku + "KU32",
-                CreateValue("Inkomstar", ku32.Id.Inkomstar),
-                CreateValue("Specifikationsnummer", ku32.Id.Specifikationsnummer),
-                CreateValue("VPNamn", ku32.VPNamn),
-                CreateValue("ISIN", ku32.ISIN),
-                CreateValue("AntalAvyttrade", ku32.AntalAvyttrade),
-                CreateValue("ErhallenErsattning", ku32.ErhallenErsattning),
-                    new XElement(_ku + "InkomsttagareKU32",
-                        CreateValue("Inkomsttagare", ku32.Id.Inkomsttagare)
-                    ),
-                    new XElement(_ku + "UppgiftslamnareKU32",
-                        CreateValue("UppgiftslamnarId", ku32.Id.UppgiftslamnarId)
-                    )
-                );
+            var data = blankettinnehall.Data;
+
+            var el = new XElement(_ku + id.Typ);
+
+            foreach (var f in data.Subset(layout.Kontrolluppgifter))
+            {
+                if (f.HasValue)
+                {
+                    el.Add(CreateValue(f));
+                }
+            }
+
+            var inkomsttagare = new XElement(_ku + "Inkomsttagare" + id.Typ);
+            foreach (var f in data.Subset(layout.Inkomsttagare))
+            {
+                if (f.HasValue)
+                {
+                    inkomsttagare.Add(CreateValue(f));
+                }
+            }
+            el.Add(inkomsttagare);
+
+            var uppgiftslamnare = new XElement(_ku + "Uppgiftslamnare" + id.Typ);
+            foreach (var f in data.Subset(layout.Uppgiftslamnare))
+            {
+                if (f.HasValue)
+                {
+                    uppgiftslamnare.Add(CreateValue(f));
+                }
+            }
+            el.Add(uppgiftslamnare);
+
             return el;
         }
     }

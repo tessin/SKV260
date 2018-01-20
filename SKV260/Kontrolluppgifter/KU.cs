@@ -1,21 +1,18 @@
-﻿using System.Xml.Linq;
-
-namespace SKV260.Kontrolluppgifter
+﻿namespace SKV260.Kontrolluppgifter
 {
     public abstract class KU
     {
         /// <summary>
-        /// Identitet.
+        /// Innehåller all fält data, ett fält behöver inte vara ifyllt för att det förekommer i denna dictionary, 
+        /// kontrollera alltid Fält.HasValue om fält information faktiskt finns.
         /// </summary>
-        public KUId Id { get; }
+        public FältData Data { get; } = new FältData();
 
-        public Fält Borttag { get; } = new Fält(55);
-
-        protected KU(string typ, Uppgiftslamnare uppgiftslamnare, int inkomstar, Fält inkomsttagare, long specifikationsnummer)
+        public KUId GetId()
         {
-            Id = new KUId(typ, uppgiftslamnare.UppgiftslamnarePersOrgnr, inkomstar, inkomsttagare, specifikationsnummer);
+            return new KUId(this);
         }
 
-        public abstract XElement Accept(KUGenerateVisitor visitor);
+        public abstract KULayout GetLayout();
     }
 }

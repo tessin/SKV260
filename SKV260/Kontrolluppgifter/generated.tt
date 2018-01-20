@@ -1,0 +1,320 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ output extension=".cs" #>
+using System;
+
+namespace SKV260.Kontrolluppgifter
+{
+<#
+	XNamespace xsd = "http://www.w3.org/2001/XMLSchema";	
+
+	// read XML structure from schema file
+	var schema = new Dictionary<string, XElement>();
+	{
+		var c = XElement.Load(Host.ResolvePath("../files/kontrolluppgifter_3.1/komponent/Kontrolluppgifter_COMPONENT_3.1.xsd"));
+
+		foreach(var el in c.Elements(xsd + "complexType")) {
+			schema.Add((string)el.Attribute("name"), el);
+		}
+	}
+
+	var blanketter = new Dictionary<string, string>();
+
+	foreach (var row in CSV.ParseFile(Host.ResolvePath("../files/bilaga_2b_3.1.blanketter.csv")).Skip(1))
+	{
+		blanketter.Add(row[0], row[2]);
+	}
+
+	var ftmap = new Dictionary<string, string>();
+
+	foreach (var row in CSV.ParseFile(Host.ResolvePath("../files/bilaga_1_fälttyper_3.1.csv")))
+	{
+		ftmap.Add(row[0], row[1]);
+	}
+
+	var fl = CSV.ParseFile(Host.ResolvePath("../files/bilaga_2b_3.1.fältlista.csv"));
+
+	var kuIncludeSet = new HashSet<string>{ "KU20", "KU31", "KU32" };
+
+	var mm = new Multiset<string, string>();
+
+	foreach (var row in fl.Skip(1).Where(row => kuIncludeSet.Contains(row[0])))
+	{
+		var ku = row[0];
+		var fk = row[1];
+		var namn = row[2];
+		var ft = row[4];
+
+		var m = Regex.Match(ft, @"\d+$");
+		
+		var ftl = Regex.Replace(ft, @"\d+$", "");
+
+		mm.Add(fk, $"{namn},{ftl},{(m.Success ? m.Value : "-1")},{ftmap[ft]}");
+	}
+
+	foreach (var item in mm) {
+		if (item.Value.Count > 1) WriteLine($"// varning: källdata är inte konsekvent");
+		WriteLine($"// {item.Key} -> {string.Join(", ", item.Value)}");
+	}
+	
+	// ftypemap takes precedence over dtypemap
+
+	var ftypemap = new Dictionary<string, string>{
+		{ "Inkomstar", "int" },
+	};
+
+	var dtypemap = new Dictionary<string, string>{
+		{ "HELTAL", "long" },
+		{ "KRYSSRUTA", "bool" },
+		{ "LANDSKOD", "string" },
+		{ "TEXT", "string" },
+		{ "PERSORGNR", "string" },
+		{ "DATUM", "DateTime" },
+		{ "DECIMALTAL", "decimal" },
+	};
+
+	foreach (var g in fl.Skip(1).Where(row => kuIncludeSet.Contains(row[0])).GroupBy(row => row[0]))
+	{
+		WriteLine($"[Blankettnummer({blanketter[g.Key]})]");
+		WriteLine($"public partial class {g.Key} : KU {{");
+
+		// vilka fältkoder som faller in under olika XML strukturer
+		
+		{
+			var el = schema[$"{g.Key}TYPE"];
+
+			var a = $"Inkomsttagare{g.Key}";
+			var b = $"Uppgiftslamnare{g.Key}";
+
+			WriteLine("private static readonly Fältkod[] _KontrolluppgifterLayout = new [] {");
+			foreach (var fk in el.Element(xsd + "complexContent")
+				.Element(xsd + "extension")
+				.Element(xsd + "all")
+				.Elements(xsd + "element"))
+			{
+				var n = (string)fk.Attribute("ref");
+				if (n == a || n == b) continue;
+				WriteLine($"Fältkod.{n},");
+			}
+			WriteLine("};");
+		}
+
+		{
+			var el = schema[$"Inkomsttagare{g.Key}TYPE"];
+
+			WriteLine("private static readonly Fältkod[] _InkomsttagareLayout = new [] {");
+			foreach (var fk in el.Element(xsd + "all").Elements(xsd + "element"))
+			{
+				WriteLine($"Fältkod.{(string)fk.Attribute("ref")},");
+			}
+			WriteLine("};");
+		}
+
+		{
+			var el = schema[$"Uppgiftslamnare{g.Key}TYPE"];
+
+			WriteLine("private static readonly Fältkod[] _UppgiftslamnareLayout = new [] {");
+			foreach (var fk in el.Element(xsd + "all").Elements(xsd + "element"))
+			{
+				WriteLine($"Fältkod.{(string)fk.Attribute("ref")},");
+			}
+			WriteLine("};");
+		}
+
+		WriteLine("public override KULayout GetLayout() { return new KULayout(_KontrolluppgifterLayout, _InkomsttagareLayout, _UppgiftslamnareLayout); }");
+
+		foreach (var row in g)
+		{
+			var fk = row[1];
+			var namn = row[2];
+			var ft = row[4];
+			var m = Regex.Match(ft, @"\d+$");
+			var ftn = m.Success ? m.Value : "-1";
+			var ftl = Regex.Replace(ft, @"\d+$", "");
+			var d = ftmap[ft];
+			var clrtype = ftypemap.ContainsKey(ft) ? ftypemap[ft] : dtypemap[d];
+
+			// get { return Data.GetValueOrDefault<long>(Fältkod.AvdragenSkatt); }
+			// set { Data.AddOrUpdateValue(Fältkod.AvdragenSkatt, value); }
+
+			WriteLine($"public {clrtype} {namn} {{");
+			WriteLine($"get {{ return Data.GetValueOrDefault<{clrtype}>(Fältkod.{namn}); }}");
+			WriteLine($"set {{ Data.AddOrUpdateValue(Fältkod.{namn}, value); }}");
+			WriteLine("}");
+		}
+        
+		WriteLine("}");
+	}
+
+	var fälttyper = new HashSet<string>();
+	var domäner = new HashSet<string>();
+
+	WriteLine($"public enum Fältkod {{");
+	foreach (var item in mm) {
+		var split = item.Value.Single().Split(',');
+
+		var namn = split[0];
+		var ft = split[1];
+		var l = split[2];
+		var d = split[3];
+
+		fälttyper.Add(ft);
+		domäner.Add(d);
+
+		WriteLine($"[Fälttyp(Fälttyp.{ft},{l})]");
+		WriteLine($"{namn} = {item.Key.TrimStart('0')},");
+	}
+	WriteLine("}");
+	
+	WriteLine($"public enum Fälttyp {{");
+	WriteLine($"Okänd = 0, // felaktig typ");
+	foreach (var v in fälttyper) {
+		WriteLine($"{v},");
+	}
+	WriteLine("}");
+#>
+}
+
+<#+
+class Multimap<K, V> : Dictionary<K, List<V>>
+{
+	public void Add(K key, V item)
+	{
+		if (TryGetValue(key, out var list)) {
+			list.Add(item);
+		} else {
+			Add(key, new List<V> { item });
+		}
+	}
+}
+
+class Multiset<K, V> : Dictionary<K, HashSet<V>>
+{
+	public void Add(K key, V item)
+	{
+		if (TryGetValue(key, out var list)) {
+			list.Add(item);
+		} else {
+			Add(key, new HashSet<V> { item });
+		}
+	}
+}
+
+static class CSV
+{
+	public static List<string[]> ParseText(string text)
+	{
+		return Parse(new StringReader(text));
+	}
+
+	public static List<string[]> ParseFile(string fn)
+	{
+		using (var reader = File.OpenText(fn))
+		{
+			return Parse(reader);
+		}
+	}
+
+	public static List<string[]> Parse(TextReader reader)
+	{
+		var data = new List<string[]>();
+
+		var col = new StringBuilder();
+		var row = new List<string>();
+		for (;;)
+		{
+			var ln = reader.ReadLine();
+			if (ln == null) break;
+			if (Tokenize(ln, col, row))
+			{
+				data.Add(row.ToArray());
+				row.Clear();
+			}
+		}
+
+		return data;
+	}
+
+	public static bool Tokenize(string s, StringBuilder col, List<string> row)
+	{
+		int i = 0;
+
+		if (col.Length > 0)
+		{
+			col.AppendLine(); // continuation
+
+			if (!TokenizeQuote(s, ref i, col, row))
+			{
+				return false;
+			}
+		}
+
+		while (i < s.Length)
+		{
+			var ch = s[i];
+			if (ch == ',')
+			{
+				row.Add(col.ToString().Trim());
+				col.Length = 0;
+				i++;
+			}
+			else if (ch == '"')
+			{
+				i++;
+				if (!TokenizeQuote(s, ref i, col, row))
+				{
+					return false;
+				}
+			}
+			else
+			{
+				col.Append(ch);
+				i++;
+			}
+		}
+
+		if (col.Length > 0)
+		{
+			row.Add(col.ToString().Trim());
+			col.Length = 0;
+		}
+
+		return true;
+	}
+
+	public static bool TokenizeQuote(string s, ref int i, StringBuilder col, List<string> row)
+	{
+		while (i < s.Length)
+		{
+			var ch = s[i];
+			if (ch == '"')
+			{
+				// escape sequence
+				if (i + 1 < s.Length && s[i + 1] == '"')
+				{
+					col.Append('"');
+					i++;
+					i++;
+					continue;
+				}
+				i++;
+				return true;
+			}
+			else
+			{
+				col.Append(ch);
+				i++;
+			}
+		}
+		return false;
+	}
+}
+#>

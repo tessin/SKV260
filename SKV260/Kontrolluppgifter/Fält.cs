@@ -4,19 +4,16 @@ using System.Globalization;
 
 namespace SKV260.Kontrolluppgifter
 {
-    [DebuggerDisplay("FK{Key}={Value}")]
-    public class Fält
+    [DebuggerDisplay("FK{(int)Key:000}={Value}")]
+    public struct Fält
     {
-        /// <summary>
-        /// Fältkod, FKxxx, t.ex. FK215
-        /// </summary>
-        public int Key { get; set; }
+        public Fältkod Key { get; }
         public object Value { get; set; }
 
         public bool HasValue => Value != null;
         public bool IsEmpty => Value == null;
 
-        public Fält(int k, object v = null)
+        public Fält(Fältkod k, object v = null)
         {
             this.Key = k;
             this.Value = v;

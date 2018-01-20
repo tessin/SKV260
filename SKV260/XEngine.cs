@@ -48,13 +48,6 @@ namespace SKV260
             }
         }
 
-        public T Create<T>(Uppgiftslamnare uppgiftslamnare, Fält inkomsttagare, long specifikationsnummer)
-            where T : KU
-        {
-            var ku = (T)Activator.CreateInstance(typeof(T), uppgiftslamnare, _inkomstar, inkomsttagare, specifikationsnummer);
-            return ku;
-        }
-
         public Avsandare Avsandare { get; set; } = new Avsandare();
 
         public List<Uppgiftslamnare> Uppgiftslamnare { get; set; } = new List<Uppgiftslamnare>();
@@ -74,7 +67,7 @@ namespace SKV260
                     new XAttribute(XNamespace.Xmlns + "xsi", xsi),
                     new XAttribute(xsi + "schemaLocation", schemaLocation)
                 );
-            var visitor = new KUGenerateVisitor(ku);
+            var visitor = new XVisitor(ku);
             root.Add(Avsandare.Accept(visitor));
             var blankettgemensamt = new XElement(ku + "Blankettgemensamt");
             foreach (var uppgiftslamnare in Uppgiftslamnare)
@@ -82,14 +75,45 @@ namespace SKV260
                 blankettgemensamt.Add(uppgiftslamnare.Accept(visitor));
             }
             root.Add(blankettgemensamt);
+            var blankettIdSet = new HashSet<string>();
             var uppgiftslamnareSet = new HashSet<string>(Uppgiftslamnare.Select(x => x.UppgiftslamnarePersOrgnr));
+            var i = 0;
             foreach (var blankett in Blanketter)
             {
-                if (!uppgiftslamnareSet.Contains((string)blankett.Blankettinnehall.Id.UppgiftslamnarId.Value))
+                KUId id;
+                try
                 {
-                    throw new InvalidOperationException($"Uppgiftslämnare för blankett '{blankett.Blankettinnehall.Id}' är inte med i registret över uppgiftslämnare för dokumentet");
+                    id = blankett.Blankettinnehall.GetId();
                 }
+                catch (Exception ex)
+                {
+                    throw new InvalidOperationException($"Blankett med index {i} har inget giltigt ID", ex);
+                }
+
+                if (!blankettIdSet.Add(id.ToString()))
+                {
+                    throw new InvalidOperationException($"Blankett med ID '{id}' förekommer flera gånger");
+                }
+                if (!uppgiftslamnareSet.Contains(id.UppgiftslamnarId))
+                {
+                    throw new InvalidOperationException($"Uppgiftslämnare för blankett med ID '{id}' är inte med i registret över uppgiftslämnare för dokumentet");
+                }
+                if (_inkomstar != id.Inkomstar)
+                {
+                    throw new InvalidOperationException($"Blankett med ID '{id}' avser ett annat inkomstår än {_inkomstar}");
+                }
+
+                try
+                {
+                    KUHelper.Validate(blankett.Blankettinnehall);
+                }
+                catch (Exception ex)
+                {
+                    throw new InvalidOperationException($"Blankett med ID '{id}' innehåller felaktiga uppgifter", ex);
+                }
+
                 root.Add(blankett.Accept(visitor));
+                i++;
             }
             doc.Add(root);
 

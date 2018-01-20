@@ -26,13 +26,15 @@ namespace SKV260
                 throw new InvalidOperationException("Metadata BlankettnummerAttribute is missing");
             }
 
+            var id = ku.GetId();
+
             return new Blankett
             {
                 Nummer = blankettnummer.Nummer,
                 Arendeinformation =
                 {
-                    Arendeagare = (string)ku.Id.UppgiftslamnarId.Value,
-                    Period = (int)ku.Id.Inkomstar.Value,
+                    Arendeagare = id.UppgiftslamnarId,
+                    Period = id.Inkomstar,
                 },
                 Blankettinnehall = ku
             };
@@ -48,7 +50,7 @@ namespace SKV260
 
         public KU Blankettinnehall { get; set; }
 
-        public XElement Accept(KUGenerateVisitor visitor)
+        public XElement Accept(XVisitor visitor)
         {
             return visitor.Visit(this);
         }

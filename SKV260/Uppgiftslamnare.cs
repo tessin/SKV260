@@ -15,7 +15,7 @@ namespace SKV260
 
         public List<Kontaktperson> Kontaktperson { get; set; } = new List<Kontaktperson>();
 
-        public XElement Accept(KUGenerateVisitor visitor)
+        public XElement Accept(XVisitor visitor)
         {
             return visitor.Visit(this);
         }

@@ -50,12 +50,20 @@
     <Compile Include="Kontaktperson.cs" />
     <Compile Include="Kontrolluppgifter\Blankettnummer.cs" />
     <Compile Include="Kontrolluppgifter\Fält.cs" />
+    <Compile Include="Kontrolluppgifter\FältData.cs" />
+    <Compile Include="Kontrolluppgifter\FälttypAttribute.cs" />
+    <Compile Include="Kontrolluppgifter\FältHelper.cs" />
+    <Compile Include="Kontrolluppgifter\generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>generated.tt</DependentUpon>
+    </Compile>
     <Compile Include="Kontrolluppgifter\KU.cs" />
-    <Compile Include="Kontrolluppgifter\KU20.cs" />
-    <Compile Include="Kontrolluppgifter\KU31.cs" />
-    <Compile Include="Kontrolluppgifter\KU32.cs" />
+    <Compile Include="Kontrolluppgifter\KUHelper.cs" />
     <Compile Include="Kontrolluppgifter\KUId.cs" />
-    <Compile Include="Kontrolluppgifter\KUGenerateVisitor.cs" />
+    <Compile Include="Kontrolluppgifter\KULayout.cs" />
+    <Compile Include="Kontrolluppgifter\Sambandskontroller.cs" />
+    <Compile Include="XVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TekniskKontaktperson.cs" />
@@ -75,11 +83,21 @@
     <EmbeddedResource Include="files\kontrolluppgifter_3.1\komponent\Kontrolluppgifter_COMPONENT_3.1.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="files\bilaga_1_fälttyper_3.1.csv" />
+    <None Include="files\bilaga_2b_3.1.blanketter.csv" />
+    <None Include="files\bilaga_2b_3.1.fältlista.csv" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="files\kontrolluppgifter_3.1\exempelfiler\4.xml" />
     <Content Include="files\kontrolluppgifter_3.1\exempelfiler\7.xml" />
     <Content Include="files\kontrolluppgifter_3.1\instans\Kontrolluppgifter_3.1.xsl" />
+    <Content Include="Kontrolluppgifter\generated.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

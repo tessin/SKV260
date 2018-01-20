@@ -23,7 +23,7 @@ namespace SKV260
         /// </summary>
         public DateTime Skapad { get; set; } = DateTime.Now;
 
-        public XElement Accept(KUGenerateVisitor visitor)
+        public XElement Accept(XVisitor visitor)
         {
             return visitor.Visit(this);
         }
