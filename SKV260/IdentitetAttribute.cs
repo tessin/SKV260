@@ -10,7 +10,7 @@ namespace SKV260
     {
         public override bool IsValid(object value)
         {
-            return KUHelper.IsIdentitetValid(value);
+            return FältHelper.IsIdentitetValid(value);
         }
 
         public override string FormatErrorMessage(string name)

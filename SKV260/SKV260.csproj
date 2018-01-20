@@ -63,6 +63,7 @@
     <Compile Include="Kontrolluppgifter\KUId.cs" />
     <Compile Include="Kontrolluppgifter\KULayout.cs" />
     <Compile Include="Kontrolluppgifter\Sambandskontroller.cs" />
+    <Compile Include="Text.cs" />
     <Compile Include="XVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

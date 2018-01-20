@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace SKV260.Kontrolluppgifter
@@ -11,7 +13,7 @@ namespace SKV260.Kontrolluppgifter
     /// </summary>
     public struct KUId
     {
-        public static readonly Fältkod[] Fält = new Fältkod[] {
+        public static readonly Fältkod[] Identifikatorer = new Fältkod[] {
             Fältkod.UppgiftslamnarId,
             Fältkod.Inkomstar,
             Fältkod.Inkomsttagare,
@@ -78,50 +80,29 @@ namespace SKV260.Kontrolluppgifter
             get;
         }
 
+        public bool IsComplete { get; }
+
         public KUId(KU ku)
         {
+            if (ku == null)
+            {
+                throw new ArgumentNullException(nameof(ku));
+            }
+
             var typ = ku.GetType().Name;
-            var uppgiftslamnarId = ku.Data.GetValueOrDefault<string>(Fältkod.UppgiftslamnarId);
-            var inkomstar = ku.Data.GetValueOrDefault<int>(Fältkod.Inkomstar);
-            var inkomsttagare = ku.Data.GetValueOrDefault<string>(Fältkod.Inkomsttagare);
-            var fodelsetid = ku.Data.GetValueOrDefault<string>(Fältkod.Fodelsetid);
-            var annatIDNr = ku.Data.GetValueOrDefault<string>(Fältkod.AnnatIDNr);
-            var specifikationsnummer = ku.Data.GetValueOrDefault<long>(Fältkod.Specifikationsnummer);
-
-            if (!Regex.IsMatch(typ, @"KU\d+"))
+            if (!(typ.StartsWith("KU") && typ.Substring(2).All(char.IsDigit)))
             {
-                throw new ArgumentException("Felaktig KU-typ", nameof(typ));
+                throw new ArgumentException("Felaktig KU-typ", nameof(ku));
             }
 
-            if (string.IsNullOrEmpty(uppgiftslamnarId))
-            {
-                throw new ArgumentException("Felaktigt uppgiftslamnarId", nameof(uppgiftslamnarId));
-            }
+            var data = ku.Data;
 
-            if (inkomstar == 0)
-            {
-                throw new ArgumentException("Felaktigt inkomstar", nameof(inkomstar));
-            }
-
-            if (!ku.Data.Contains(Fältkod.Inkomsttagare) && !ku.Data.Contains(Fältkod.Fodelsetid) && !ku.Data.Contains(Fältkod.AnnatIDNr))
-            {
-                throw new InvalidOperationException("FK215 ska finnas om FK222 och FK224 saknas.");
-            }
-
-            if (ku.Data.Contains(Fältkod.Inkomsttagare) && ku.Data.Contains(Fältkod.Fodelsetid))
-            {
-                throw new InvalidOperationException("Om FK215 finns får inte FK222 finnas.");
-            }
-
-            if (!(ku.Data.Contains(Fältkod.Inkomsttagare) || ku.Data.Contains(Fältkod.Fodelsetid) || ku.Data.Contains(Fältkod.AnnatIDNr)))
-            {
-                throw new InvalidOperationException("FK215, FK222 eller FK224 saknas.");
-            }
-
-            if (!(1 <= specifikationsnummer && specifikationsnummer <= 9999999999))
-            {
-                throw new ArgumentException("Felaktigt specifikationsnummer", nameof(specifikationsnummer));
-            }
+            var uppgiftslamnarId = data.GetValueOrDefault<string>(Fältkod.UppgiftslamnarId);
+            var inkomstar = data.GetValueOrDefault<int>(Fältkod.Inkomstar);
+            var inkomsttagare = data.GetValueOrDefault<string>(Fältkod.Inkomsttagare);
+            var fodelsetid = data.GetValueOrDefault<string>(Fältkod.Fodelsetid);
+            var annatIDNr = data.GetValueOrDefault<string>(Fältkod.AnnatIDNr);
+            var specifikationsnummer = data.GetValueOrDefault<long>(Fältkod.Specifikationsnummer);
 
             this.Typ = typ;
             this.UppgiftslamnarId = uppgiftslamnarId;
@@ -130,12 +111,49 @@ namespace SKV260.Kontrolluppgifter
             this.Fodelsetid = fodelsetid;
             this.AnnatIDNr = annatIDNr;
             this.Specifikationsnummer = specifikationsnummer;
+
+            this.IsComplete = HasId(data);
+        }
+
+        public static bool HasId(FältData d)
+        {
+            if (!d.Contains(Fältkod.UppgiftslamnarId))
+            {
+                return false;
+            }
+
+            if (!d.Contains(Fältkod.Inkomstar))
+            {
+                return false;
+            }
+
+            if (!d.Contains(Fältkod.Inkomsttagare) && !d.Contains(Fältkod.Fodelsetid) && !d.Contains(Fältkod.AnnatIDNr))
+            {
+                return false;
+            }
+
+            if (d.Contains(Fältkod.Inkomsttagare) && d.Contains(Fältkod.Fodelsetid))
+            {
+                return false;
+            }
+
+            if (!(d.Contains(Fältkod.Inkomsttagare) || d.Contains(Fältkod.Fodelsetid) || d.Contains(Fältkod.AnnatIDNr)))
+            {
+                return false;
+            }
+
+            if (!d.Contains(Fältkod.Specifikationsnummer))
+            {
+                return false;
+            }
+
+            return true;
         }
 
         /// <summary>
         /// Den identifikator komponent som KU avser.
         /// </summary>
-        public string GetComponentAvser()
+        private string GetComponentAvser()
         {
             if (!string.IsNullOrEmpty(Inkomsttagare))
             {
@@ -153,11 +171,11 @@ namespace SKV260.Kontrolluppgifter
         public string[] GetComponents()
         {
             return new[] {
-                Typ.ToLowerInvariant(),
-                UppgiftslamnarId.ToLowerInvariant(),
-                Convert.ToString(Inkomstar, CultureInfo.InvariantCulture),
-                GetComponentAvser().ToLowerInvariant(),
-                Specifikationsnummer.ToString("0000000000", CultureInfo.InvariantCulture),
+                Typ.ToLowerInvariant(), // 0
+                UppgiftslamnarId?.ToLowerInvariant(), // 1
+                Convert.ToString(Inkomstar, CultureInfo.InvariantCulture), // 2
+                GetComponentAvser()?.ToLowerInvariant(), // 3
+                Specifikationsnummer.ToString("0000000000", CultureInfo.InvariantCulture), // 4
             };
         }
 

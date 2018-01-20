@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +7,18 @@ namespace SKV260.Kontrolluppgifter
     public class FältData : IEnumerable<Fält>
     {
         private readonly Dictionary<Fältkod, Fält> _dict = new Dictionary<Fältkod, Fält>();
+
+        public FältData()
+        {
+        }
+
+        public FältData(IEnumerable<Fält> source)
+        {
+            foreach (var f in source)
+            {
+                _dict.Add(f.Key, f);
+            }
+        }
 
         public Fält this[Fältkod fk]
         {
@@ -36,6 +47,16 @@ namespace SKV260.Kontrolluppgifter
 
         public void AddOrUpdateValue(Fältkod fk, object v)
         {
+            if (v is string)
+            {
+                v = Text.Normalize((string)v);
+            }
+
+            if (v != null)
+            {
+                FältHelper.Validate(fk, v);
+            }
+
             if (_dict.ContainsKey(fk))
             {
                 _dict[fk] = new Fält(fk, v);

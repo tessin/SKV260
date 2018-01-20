@@ -112,6 +112,8 @@ namespace SKV260
                     throw new InvalidOperationException($"Blankett med ID '{id}' innehåller felaktiga uppgifter", ex);
                 }
 
+                Sambandskontroller.Sambandskontroll(blankett.Blankettinnehall);
+
                 root.Add(blankett.Accept(visitor));
                 i++;
             }

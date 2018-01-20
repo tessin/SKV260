@@ -7,16 +7,24 @@ namespace SKV260
 {
     public class Avsandare
     {
+        public Text _programnamn;
+        public Text _organisationsnummer;
+
         /// <summary>
         /// Det program som använts för att framställa filen
         /// </summary>
         [Required, MaxLength(50)]
-        public string Programnamn { get; set; } = "Tessin SKV260 Version 1.0";
+        public string Programnamn { get { return _programnamn; } set { _programnamn = value; } }
 
         [Required, Identitet]
-        public string Organisationsnummer { get; set; }
+        public string Organisationsnummer { get { return _organisationsnummer; } set { _organisationsnummer = value; } }
 
         public TekniskKontaktperson TekniskKontaktperson { get; set; } = new TekniskKontaktperson();
+
+        public Avsandare()
+        {
+            Programnamn = "Tessin SKV260 Version 1.0";
+        }
 
         /// <summary>
         /// Tidpunkt när filen skapades
