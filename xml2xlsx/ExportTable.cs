@@ -8,6 +8,11 @@ namespace SKV260
         public string WorksheetName { get; set; }
         public List<ExportColumn> Cols { get; set; } = new List<ExportColumn>();
         public List<ExportRow> Rows { get; set; } = new List<ExportRow>();
+
+        public ExportRow CreateRow()
+        {
+            return new ExportRow(Cols.Count);
+        }
     }
 
     public class ExportColumn

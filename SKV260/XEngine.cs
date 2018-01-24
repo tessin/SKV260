@@ -52,7 +52,7 @@ namespace SKV260
 
         public List<Uppgiftslamnare> Uppgiftslamnare { get; set; } = new List<Uppgiftslamnare>();
 
-        public List<Blankett> Blanketter { get; set; } = new List<Blankett>();
+        public BlankettCollection Blanketter { get; set; } = new BlankettCollection();
 
         public XDocument Generate()
         {
@@ -90,14 +90,16 @@ namespace SKV260
                     throw new InvalidOperationException($"Blankett med index {i} har inget giltigt ID", ex);
                 }
 
-                if (!blankettIdSet.Add(id.ToString()))
-                {
-                    throw new InvalidOperationException($"Blankett med ID '{id}' förekommer flera gånger");
-                }
                 if (!uppgiftslamnareSet.Contains(id.UppgiftslamnarId))
                 {
-                    throw new InvalidOperationException($"Uppgiftslämnare för blankett med ID '{id}' är inte med i registret över uppgiftslämnare för dokumentet");
+                    throw new InvalidOperationException($"Uppgiftslämnare för blankett med ID '{id}' är inte med i registret över uppgiftslämnare ({string.Join(", ", uppgiftslamnareSet)}) för dokumentet");
                 }
+
+                if (blankett.Arendeinformation.Arendeagare != blankett.Blankettinnehall.Data.GetValueOrDefault<string>(Fältkod.UppgiftslamnarId))
+                {
+                    throw new InvalidOperationException($"Arendeagare för blankett med ID '{id}' ska vara lika med UppgiftslamnarId");
+                }
+
                 if (_inkomstar != id.Inkomstar)
                 {
                     throw new InvalidOperationException($"Blankett med ID '{id}' avser ett annat inkomstår än {_inkomstar}");

@@ -46,6 +46,7 @@
     <Compile Include="Arendeinformation.cs" />
     <Compile Include="Avsandare.cs" />
     <Compile Include="Blankett.cs" />
+    <Compile Include="BlankettCollection.cs" />
     <Compile Include="DirectoryHelper.cs" />
     <Compile Include="Kontaktperson.cs" />
     <Compile Include="Kontrolluppgifter\Blankettnummer.cs" />

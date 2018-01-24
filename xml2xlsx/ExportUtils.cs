@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using SKV260.Kontrolluppgifter;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,7 +12,16 @@ namespace SKV260
     {
         public static int ExportXslx(string sourceFn, string destFn)
         {
-            return ExportXslx(XDocument.Load(sourceFn), destFn);
+            var ext = Path.GetExtension(sourceFn).ToLowerInvariant();
+            switch (ext)
+            {
+                case ".xml":
+                    return ExportXslx(XDocument.Load(sourceFn), destFn);
+                case ".json":
+                    return ExportXslx(JArray.Parse(File.ReadAllText(sourceFn)), destFn);
+                default:
+                    throw new InvalidOperationException($"unsupported file extension {ext}");
+            }
         }
 
         public static int ExportXslx(XDocument source, string destFn)
@@ -115,6 +126,65 @@ namespace SKV260
             using (var f = File.Create(destFn))
             {
                 xlsx.Serialize(new[] { uppgiftslamnareSheet }.Concat(tables.Values), f);
+            }
+
+            return 0;
+        }
+
+        public static int ExportXslx(JArray source, string destFn)
+        {
+            var split = destFn.Split('.');
+
+            var ku = new ExportTable { WorksheetName = split[split.Length - 2].ToUpperInvariant() };
+
+            var fks = new HashSet<Fältkod>();
+            var rows = new List<Tuple<Dictionary<Fältkod, string>, JObject>>();
+
+            foreach (JObject obj in source)
+            {
+                var row = new Dictionary<Fältkod, string>();
+                foreach (var prop in obj.Properties())
+                {
+                    if (Enum.TryParse(prop.Name, out Fältkod fk))
+                    {
+                        row.Add(fk, (string)prop.Value);
+                        fks.Add(fk);
+                    }
+                }
+                rows.Add(Tuple.Create(row, obj));
+            }
+
+            //
+            var columnMap = new Dictionary<Fältkod, int>();
+            foreach (var fk in fks.OrderBy(x => x))
+            {
+                var ordinal = columnMap.Count;
+                columnMap.Add(fk, ordinal);
+                ku.Cols.Add(new ExportColumn(ordinal, $"{fk} ({(int)fk:000})"));
+            }
+            var tessinNamn = ku.Cols.Count;
+            ku.Cols.Add(new ExportColumn(tessinNamn, $"Namn (ej SKV)"));
+            foreach (var item in rows)
+            {
+                var row = ku.CreateRow();
+
+                foreach (var x in item.Item1)
+                {
+                    row.SetCell(columnMap[x.Key], x.Value);
+                }
+
+                row.SetCell(tessinNamn, $"{(string)item.Item2["TessinUserFirstName"]}");
+                row.SetCell(tessinNamn, $"{(string)item.Item2["TessinUserLastName"]}");
+
+                ku.Rows.Add(row);
+            }
+            //
+
+            var xlsx = new XlsxExportFormatter();
+
+            using (var f = File.Create(destFn))
+            {
+                xlsx.Serialize(new[] { ku }, f);
             }
 
             return 0;
