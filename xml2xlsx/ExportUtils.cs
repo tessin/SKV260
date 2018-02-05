@@ -173,8 +173,7 @@ namespace SKV260
                     row.SetCell(columnMap[x.Key], x.Value);
                 }
 
-                row.SetCell(tessinNamn, $"{(string)item.Item2["TessinUserFirstName"]}");
-                row.SetCell(tessinNamn, $"{(string)item.Item2["TessinUserLastName"]}");
+                row.SetCell(tessinNamn, $"{(string)item.Item2["TessinUserFirstName"]} {(string)item.Item2["TessinUserLastName"]}");
 
                 ku.Rows.Add(row);
             }
