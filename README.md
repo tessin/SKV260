@@ -1,38 +1,45 @@
-Om inget annat framgår, utgå från Skatteverkets dokumentation "Teknisk beskrivning och XML-schemalager för inkomstår 2017".
+ï»¿Om inget annat framgÃ¥r, utgÃ¥ frÃ¥n Skatteverkets dokumentation "Teknisk beskrivning och XML-schemalager fÃ¶r inkomstÃ¥r 2017".
 
 https://www.skatteverket.se/foretagochorganisationer/sjalvservice/allaetjanster/tjanster/lamnakontrolluppgifter/tekniskbeskrivningochxmlschemalagerforinkomstar2017.4.515a6be615c637b9aa46fe8.html
 
 ----
 
-Det här är ett .NET lib som hjälper dig med elektronisk redovisning av kontrolluppgifter till skatteverket. **Tessin Nordic AB** har tagit fram en lösning för KU20, KU31 och KU32. Stöd för ytterligare kontrolluppgifter finns inte i dags läget men det går att bygga vidare efter samma principer som övriga kontrolluppgifter använder.
+Det hÃ¤r Ã¤r ett .NET lib som hjÃ¤lper dig med elektronisk redovisning av kontrolluppgifter till skatteverket. **Tessin Nordic AB** har tagit fram en lÃ¶sning fÃ¶r KU20, KU31 och KU32. StÃ¶d fÃ¶r ytterligare kontrolluppgifter finns inte i dags lÃ¤get men det gÃ¥r att bygga vidare efter samma principer som Ã¶vriga kontrolluppgifter anvÃ¤nder.
 
 ----
 
 # Exempel
 
-Titta närmare på `Program.cs` is mappen SKV260 eller xml2xlsx för mer information.
+Titta nÃ¤rmare pÃ¥ `Program.cs` is mappen SKV260 eller xml2xlsx fÃ¶r mer information.
 
 # Bra att veta
 
-- Skatteverket använder [12-siffriga organisationsnummer](https://sv.wikipedia.org/wiki/Organisationsnummer#12-siffriga_organisationsnummer). 
-- Skatteverket tillåter inga skiljetecken i person-/samordnings- eller, organisationsnummer.
-- Alla text fält har längdbegränsningar
+- Skatteverket anvÃ¤nder [12-siffriga organisationsnummer](https://sv.wikipedia.org/wiki/Organisationsnummer#12-siffriga_organisationsnummer). 
+- Skatteverket tillÃ¥ter inga skiljetecken i person-/samordnings- eller, organisationsnummer.
+- Alla text fÃ¤lt har lÃ¤ngdbegrÃ¤nsningar
 
 ----
 
-När KU lämnas till Skatteverket måste motsvarande information lämnas till den som KU avser.
+NÃ¤r KU lÃ¤mnas till Skatteverket mÃ¥ste motsvarande information lÃ¤mnas till den som KU avser.
 
-Den kan lämnas på valfritt sätt, t.ex.
+Den kan lÃ¤mnas pÃ¥ valfritt sÃ¤tt, t.ex.
 
-- på sista lönebeskedet för året
-- på årsbesked
-- på eget formulär anpassat för egna utskriftsrutiner och behov
+- pÃ¥ sista lÃ¶nebeskedet fÃ¶r Ã¥ret
+- pÃ¥ Ã¥rsbesked
+- pÃ¥ eget formulÃ¤r anpassat fÃ¶r egna utskriftsrutiner och behov
 - via e-post
 
-Det är viktigt att det är enkelt för den som KU avser, att jämföra uppgifterna mot inkomstdeklarationen.
+Det Ã¤r viktigt att det Ã¤r enkelt fÃ¶r den som KU avser, att jÃ¤mfÃ¶ra uppgifterna mot inkomstdeklarationen.
 
-Har KU13 eller KU14 lämnats ska uppgiften till den anställde innehålla en upplysning med följande innebörd:
+Har KU13 eller KU14 lÃ¤mnats ska uppgiften till den anstÃ¤llde innehÃ¥lla en upplysning med fÃ¶ljande innebÃ¶rd:
 
-KU13: ”Denna uppgift avser inkomst som enligt beslut om särskild inkomstskatt för utomlands bosatta inte ska deklareras i Sverige.”
+KU13: â€Denna uppgift avser inkomst som enligt beslut om sÃ¤rskild inkomstskatt fÃ¶r utomlands bosatta inte ska deklareras i Sverige.â€
 
-KU14: ”Denna uppgift avser särskild kontrolluppgift - Pensionsgrundande inkomst och utbyte av kontrolluppgifter, för inkomster som inte ska deklareras i Sverige”.
+KU14: â€Denna uppgift avser sÃ¤rskild kontrolluppgift - Pensionsgrundande inkomst och utbyte av kontrolluppgifter, fÃ¶r inkomster som inte ska deklareras i Sverigeâ€.
+
+# Hur hanterar vi uppdateringar av Skatteverkets tjÃ¤nst
+
+Skatteverket gÃ¶r emellertid uppdateringar av sin tjÃ¤nst men nya fÃ¤ltkoder och versioner. Detta krÃ¤ver att man manuellt uppdaterar vissa filer och genererar ny kod som fÃ¶ljd av detta. En specifik version av detta hjÃ¤lp biblotek Ã¤r inte tÃ¤nkt att anvÃ¤ndas fÃ¶r nÃ¥got annat Ã¤n 1 specifkt inkomst Ã¥r.
+
+Vi uppdaterar genom att exportera frÃ¥n Skatteverkets excel listor till CSV som vi sedan kan konsumera i en T4 mall som skapar den kod vi behÃ¶ver.
+

@@ -1,4 +1,4 @@
-﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ assembly name="System.Xml" #>
 <#@ assembly name="System.Xml.Linq" #>
@@ -19,7 +19,7 @@ namespace SKV260.Kontrolluppgifter
 	// read XML structure from schema file
 	var schema = new Dictionary<string, XElement>();
 	{
-		var c = XElement.Load(Host.ResolvePath("../files/kontrolluppgifter_3.1/komponent/Kontrolluppgifter_COMPONENT_3.1.xsd"));
+		var c = XElement.Load(Host.ResolvePath(@"..\files\kontrolluppgifter_4.0\komponent\Kontrolluppgifter_COMPONENT_4.0.xsd"));
 
 		foreach(var el in c.Elements(xsd + "complexType")) {
 			schema.Add((string)el.Attribute("name"), el);
@@ -28,19 +28,19 @@ namespace SKV260.Kontrolluppgifter
 
 	var blanketter = new Dictionary<string, string>();
 
-	foreach (var row in CSV.ParseFile(Host.ResolvePath("../files/bilaga_2b_3.1.blanketter.csv")).Skip(1))
+	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_4.0\bilaga_2b_blanketter_4.0.csv")).Skip(1))
 	{
 		blanketter.Add(row[0], row[2]);
 	}
 
 	var ftmap = new Dictionary<string, string>();
 
-	foreach (var row in CSV.ParseFile(Host.ResolvePath("../files/bilaga_1_fälttyper_3.1.csv")))
+	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_4.0\bilaga_1_fälttyper_4.0.csv")))
 	{
 		ftmap.Add(row[0], row[1]);
 	}
 
-	var fl = CSV.ParseFile(Host.ResolvePath("../files/bilaga_2b_3.1.fältlista.csv"));
+	var fl = CSV.ParseFile(Host.ResolvePath("../files/kontrolluppgifter_4.0/bilaga_2b_fältlista_4.0.csv"));
 
 	var kuIncludeSet = new HashSet<string>{ "KU20", "KU31", "KU32" };
 
@@ -260,7 +260,7 @@ static class CSV
 		while (i < s.Length)
 		{
 			var ch = s[i];
-			if (ch == ',')
+			if (ch == ';') // why does Excel generate CSV files using semicolon as separator!?
 			{
 				row.Add(col.ToString().Trim());
 				col.Length = 0;

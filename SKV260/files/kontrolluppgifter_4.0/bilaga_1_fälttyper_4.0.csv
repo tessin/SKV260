@@ -1,0 +1,55 @@
+﻿Fälttyp;Domän;Beskrivning;Länk till SKVs webb
+AnlID;HELTAL;18 siffror som börjar med 735999;
+AntalKm;HELTAL;0 - 999999;
+AntalManader;HELTAL;1 - 12;
+ArbetsstalleNummer;HELTAL;0 - 99999;
+Belopp10;HELTAL;0 - 9999999999;
+Belopp12;HELTAL;0 - 999999999999;
+Belopp6;HELTAL;0 - 999999;
+Belopp7;HELTAL;0 - 9999999;
+BeloppNeg12;HELTAL;-99999999999-999999999999;
+Betalkod;HELTAL;Max 3 siffror. Värdeförråd Listas i bilaga 1 i broschyren SKV373.;"Broschyren ""Kontrolluppgifter - ränta, utdelning m.m. SKV373"
+Bilkod;TEXT;Max 7 tecken. ÅÅBBNNN, ÅÅ=Tillverkningsår (två siffror), BB=Bilmärkeskod (två bokstäver), NNN=Bilvariant (tre siffror);
+Dagar;HELTAL;0-366;
+Datum;DATUM;ÅÅÅÅMMDD (Ska vara ett giltigt datum);
+Decimal2;DECIMALTAL;Tal större än noll och mindre än etthundra med heltal eller upp till två decimaler: 0.01-99.99 Punkt (.) är alltså decimalavskiljare;
+Decimal2-100;DECIMALTAL;Tal större än noll och mindre än eller lika med etthundra med noll till två decimaler: 0.01-100.00;
+Epost;TEXT;Max 256 tecken. Fältet måste också följa standardformatet för hur man skriver e-postadresser, dvs. <användarnamn@dindomän.toppdomän>.;
+Ersattningskod;HELTAL;Max 3 siffror. Värdeförråd, endast giltiga ersättningskoder: (100-105, 107-108, 111-113, 120-121, 200, 400-404, 406, 408-411, 420-424, 426-429, 440-441, 450, 473, 481, 483, 486, 999) Koder med beskrivning finns på Skatteverkets webb-plats.;KU18 - Kontrolluppgift från pensions- och försäkringsutbetalare m.fl. med ersättningskoder
+Fartygssignal;TEXT;4 tecken;
+Fodelsetid;HELTAL;ÅÅÅÅMMDDnnn där: ÅÅÅÅMMDD ska vara ett giltigt datum med 18, 19 eller 20 som sekelsiffror. nnn kan vara vilket heltal som helst mellan 000 - 999.;
+GemensamIndividuell;VAL;G=Gemensamma för flera delägare, I=Individuella;
+Identitet;PERSORGNR;SSÅÅMMDDNNNK: Korrekt person-/organisations-/samordningsnummer, dvs börja på 16, 18, 19 eller 20 och innehålla en korrekt kontrollsiffra.;
+Inkomstar;DATUM;ÅÅÅÅ Ska vara 2018.;
+Isin;TEXT;12 tecken, LLNNNNNNNNNK, LL = Landskod (två bokstäver), NNNNNNNNN = alfanumeriskt lokalt nummer, K = Kontrolltecken (siffra);
+KategoriKU14;VAL;"Urval A-F. 
+A=A. Arbetsgivare i Sverige. EU-förordningen är tillämplig. 1. Inkomsttagaren är utsänd från Sverige för arbete i annat medlemsland alternativt beslut om förlängning eller dispens finns. 2. Inkomsttagare som i annat fall ska omfattas av svensk socialförsäkring. 
+B=B. Arbetsgivare i annat medlemsland. EU-förordningen är tillämplig. 1. Inkomsttagaren arbetar i annat medlemsland och omfattas av svensk socialförsäkring. 2. Inkomsttagaren är svensk medborgare och har valt att omfattas av den svenska lagstiftningen (enligt artikel 16 i förordning 1408/71 eller artikel 15 i förordning 883/2004)., 
+C=C. Konventionsfall, arbetsgivare i Sverige. EU-förordningen är inte tillämplig. Inkomsttagaren är utsänd för arbete i konventionsland. (Utsändningsintyg eller beslut om förlängning eller dispens krävs.),
+D=D. Arbetsgivare i Sverige. EU-förordningen eller konvention är inte tillämplig. Inkomsttagaren är utsänd för arbete i annat land i högst ett år.
+E=E. Anställd på utländsk beskickning i Sverige och som enligt skatteavtal ska betala skatt i beskickningslandet.
+F=F. Övriga fall. Utbetalare i Sverige. Inkomsttagaren är bosatt eller ska beskattas i utlandet och tillhör inte kategori A - E. (Endast vissa länder.)";
+Kontoslag;VAL;S=Skogskonto, A=Skogsskadekonto, U=Upphovsmannakonto;
+Kryss;KRYSSRUTA;Sätts till 1 om ikryssad.;
+KWh10;HELTAL;0 - 9999999999;
+Landskod;LANDSKOD;Två tecken (bokstäver). Värdeförråd enligt ISO 3166. Listas i bilaga 2 och 3 i broschyren SKV 373.;www.skatteverket.se/landskoder
+Manad;DATUM;1 - 12;
+NarfartFjarrfart;VAL;N=Närfart, F=Fjärrfart;
+PostNummer;TEXT;Max 9 tecken.;
+Redovisningsmetod;VAL;B=Brutto, N=Netto;
+SandUnderTid;VAL;A=mindre än 6 månader, B=6-12 månader, C=mer än 1 år;
+Skapad;DATUM;ÅÅÅÅ-MM-DDTtt:mm:ss;
+SpecifikationsNummer;HELTAL;1 - 9999999999;
+Tal2;HELTAL;1-99;
+Text10;TEXT;Max 10 tecken.;
+Text13;TEXT;Max 13 tecken.;
+Text20;TEXT;Max 20 tecken.;
+Text30;TEXT;Max 30 tecken.;
+Text35;TEXT;Max 35 tecken.;
+Text350;TEXT;Max 350 tecken.;
+Text36;TEXT;Max 36 tecken.;
+Text40;TEXT;Max 40 tecken.;
+Text50;TEXT;Max 50 tecken.;
+TypForsakring;VAL;P=Pensionsförsäkring, K=Kapitalförsäkring;
+TypOption;VAL;I=Innehavd, U=Utfärdad;
+Valutakod;VALUTAKOD;Värdeförråd,  Värdeförråd enligt ISO 4217. Listas i bilaga 2 och 3 i broschyren SKV 373.;"Broschyren ""Kontrolluppgifter - ränta, utdelning m.m. SKV373"
