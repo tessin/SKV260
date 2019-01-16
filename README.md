@@ -1,6 +1,6 @@
-﻿Om inget annat framgår, utgå från Skatteverkets dokumentation "Teknisk beskrivning och XML-schemalager för inkomstår 2017".
+﻿Om inget annat framgår, utgå från Skatteverkets dokumentation "Teknisk beskrivning och XML-schemalager för inkomstår 2018".
 
-https://www.skatteverket.se/foretagochorganisationer/sjalvservice/allaetjanster/tjanster/lamnakontrolluppgifter/tekniskbeskrivningochxmlschemalagerforinkomstar2017.4.515a6be615c637b9aa46fe8.html
+https://www.skatteverket.se/foretagochorganisationer/sjalvservice/allaetjanster/tjanster/lamnakontrolluppgifter/tekniskbeskrivningochxmlschemalagerforinkomstar2018.4.4a4d586616058d860bc86a2.html
 
 ----
 
@@ -41,5 +41,6 @@ KU14: ”Denna uppgift avser särskild kontrolluppgift - Pensionsgrundande inkom
 
 Skatteverket gör emellertid uppdateringar av sin tjänst men nya fältkoder och versioner. Detta kräver att man manuellt uppdaterar vissa filer och genererar ny kod som följd av detta. En specifik version av detta hjälp biblotek är inte tänkt att användas för något annat än 1 specifkt inkomst år.
 
-Vi uppdaterar genom att exportera från Skatteverkets excel listor till CSV som vi sedan kan konsumera i en T4 mall som skapar den kod vi behöver.
+Vi uppdaterar genom att exportera från Skatteverkets Excel listor till CSV som vi sedan kan konsumera i en T4 mall som skapar den kod vi behöver. Ev. sambandskontroller som görs, måste läggas till manuellt.
 
+Hur en uppdatering går till kan man se här https://github.com/tessin/SKV260/commit/c301d972d5c5edaa39965c11a488e8127b9ee8a8
