@@ -29,6 +29,13 @@ namespace SKV260.Kontrolluppgifter
 // 503 -> RanteinkomstEjKonto,Belopp,10,HELTAL
 // 504 -> AnnanInkomst,Belopp,7,HELTAL
 // 570 -> Specifikationsnummer,SpecifikationsNummer,-1,HELTAL
+// 528 -> UnderlagForInvesteraravdrag,Belopp,10,HELTAL
+// 529 -> TotUnderlagInvesteraravdrag,Belopp,10,HELTAL
+// 530 -> Betalningsar,Kryss,-1,KRYSSRUTA
+// 531 -> AterforingAvyttring,Kryss,-1,KRYSSRUTA
+// 532 -> AterforingUtflyttning,Kryss,-1,KRYSSRUTA
+// 533 -> AterforingHogVardeoverforing,Kryss,-1,KRYSSRUTA
+// 534 -> AterforingInternaForvarv,Kryss,-1,KRYSSRUTA
 // 002 -> AvdragenUtlandskSkatt,Belopp,10,HELTAL
 // 003 -> AvdragenKupongskatt,Belopp,10,HELTAL
 // 079 -> LandskodHemvist,Landskod,-1,LANDSKOD
@@ -182,6 +189,151 @@ set { Data.AddOrUpdateValue(Fältkod.RanteinkomstEjKonto, value); }
 public long AnnanInkomst {
 get { return Data.GetValueOrDefault<long>(Fältkod.AnnanInkomst); }
 set { Data.AddOrUpdateValue(Fältkod.AnnanInkomst, value); }
+}
+public long Specifikationsnummer {
+get { return Data.GetValueOrDefault<long>(Fältkod.Specifikationsnummer); }
+set { Data.AddOrUpdateValue(Fältkod.Specifikationsnummer, value); }
+}
+}
+[Blankettnummer(2335)]
+public partial class KU28 : KU {
+private static readonly Fältkod[] _KontrolluppgifterLayout = new [] {
+Fältkod.Delagare,
+Fältkod.Inkomstar,
+Fältkod.Borttag,
+Fältkod.UnderlagForInvesteraravdrag,
+Fältkod.TotUnderlagInvesteraravdrag,
+Fältkod.Betalningsar,
+Fältkod.AterforingAvyttring,
+Fältkod.AterforingUtflyttning,
+Fältkod.AterforingHogVardeoverforing,
+Fältkod.AterforingInternaForvarv,
+Fältkod.Specifikationsnummer,
+};
+private static readonly Fältkod[] _InkomsttagareLayout = new [] {
+Fältkod.LandskodTIN,
+Fältkod.Inkomsttagare,
+Fältkod.Fornamn,
+Fältkod.Efternamn,
+Fältkod.Gatuadress,
+Fältkod.Postnummer,
+Fältkod.Postort,
+Fältkod.LandskodPostort,
+Fältkod.Fodelsetid,
+Fältkod.AnnatIDNr,
+Fältkod.OrgNamn,
+Fältkod.Gatuadress2,
+Fältkod.FriAdress,
+Fältkod.TIN,
+};
+private static readonly Fältkod[] _UppgiftslamnareLayout = new [] {
+Fältkod.UppgiftslamnarId,
+Fältkod.NamnUppgiftslamnare,
+};
+public override KULayout GetLayout() { return new KULayout(_KontrolluppgifterLayout, _InkomsttagareLayout, _UppgiftslamnareLayout); }
+public bool Delagare {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Delagare); }
+set { Data.AddOrUpdateValue(Fältkod.Delagare, value); }
+}
+public string LandskodTIN {
+get { return Data.GetValueOrDefault<string>(Fältkod.LandskodTIN); }
+set { Data.AddOrUpdateValue(Fältkod.LandskodTIN, value); }
+}
+public string UppgiftslamnarId {
+get { return Data.GetValueOrDefault<string>(Fältkod.UppgiftslamnarId); }
+set { Data.AddOrUpdateValue(Fältkod.UppgiftslamnarId, value); }
+}
+public string NamnUppgiftslamnare {
+get { return Data.GetValueOrDefault<string>(Fältkod.NamnUppgiftslamnare); }
+set { Data.AddOrUpdateValue(Fältkod.NamnUppgiftslamnare, value); }
+}
+public int Inkomstar {
+get { return Data.GetValueOrDefault<int>(Fältkod.Inkomstar); }
+set { Data.AddOrUpdateValue(Fältkod.Inkomstar, value); }
+}
+public bool Borttag {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Borttag); }
+set { Data.AddOrUpdateValue(Fältkod.Borttag, value); }
+}
+public string Inkomsttagare {
+get { return Data.GetValueOrDefault<string>(Fältkod.Inkomsttagare); }
+set { Data.AddOrUpdateValue(Fältkod.Inkomsttagare, value); }
+}
+public string Fornamn {
+get { return Data.GetValueOrDefault<string>(Fältkod.Fornamn); }
+set { Data.AddOrUpdateValue(Fältkod.Fornamn, value); }
+}
+public string Efternamn {
+get { return Data.GetValueOrDefault<string>(Fältkod.Efternamn); }
+set { Data.AddOrUpdateValue(Fältkod.Efternamn, value); }
+}
+public string Gatuadress {
+get { return Data.GetValueOrDefault<string>(Fältkod.Gatuadress); }
+set { Data.AddOrUpdateValue(Fältkod.Gatuadress, value); }
+}
+public string Postnummer {
+get { return Data.GetValueOrDefault<string>(Fältkod.Postnummer); }
+set { Data.AddOrUpdateValue(Fältkod.Postnummer, value); }
+}
+public string Postort {
+get { return Data.GetValueOrDefault<string>(Fältkod.Postort); }
+set { Data.AddOrUpdateValue(Fältkod.Postort, value); }
+}
+public string LandskodPostort {
+get { return Data.GetValueOrDefault<string>(Fältkod.LandskodPostort); }
+set { Data.AddOrUpdateValue(Fältkod.LandskodPostort, value); }
+}
+public long Fodelsetid {
+get { return Data.GetValueOrDefault<long>(Fältkod.Fodelsetid); }
+set { Data.AddOrUpdateValue(Fältkod.Fodelsetid, value); }
+}
+public string AnnatIDNr {
+get { return Data.GetValueOrDefault<string>(Fältkod.AnnatIDNr); }
+set { Data.AddOrUpdateValue(Fältkod.AnnatIDNr, value); }
+}
+public string OrgNamn {
+get { return Data.GetValueOrDefault<string>(Fältkod.OrgNamn); }
+set { Data.AddOrUpdateValue(Fältkod.OrgNamn, value); }
+}
+public string Gatuadress2 {
+get { return Data.GetValueOrDefault<string>(Fältkod.Gatuadress2); }
+set { Data.AddOrUpdateValue(Fältkod.Gatuadress2, value); }
+}
+public string FriAdress {
+get { return Data.GetValueOrDefault<string>(Fältkod.FriAdress); }
+set { Data.AddOrUpdateValue(Fältkod.FriAdress, value); }
+}
+public string TIN {
+get { return Data.GetValueOrDefault<string>(Fältkod.TIN); }
+set { Data.AddOrUpdateValue(Fältkod.TIN, value); }
+}
+public long UnderlagForInvesteraravdrag {
+get { return Data.GetValueOrDefault<long>(Fältkod.UnderlagForInvesteraravdrag); }
+set { Data.AddOrUpdateValue(Fältkod.UnderlagForInvesteraravdrag, value); }
+}
+public long TotUnderlagInvesteraravdrag {
+get { return Data.GetValueOrDefault<long>(Fältkod.TotUnderlagInvesteraravdrag); }
+set { Data.AddOrUpdateValue(Fältkod.TotUnderlagInvesteraravdrag, value); }
+}
+public bool Betalningsar {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Betalningsar); }
+set { Data.AddOrUpdateValue(Fältkod.Betalningsar, value); }
+}
+public bool AterforingAvyttring {
+get { return Data.GetValueOrDefault<bool>(Fältkod.AterforingAvyttring); }
+set { Data.AddOrUpdateValue(Fältkod.AterforingAvyttring, value); }
+}
+public bool AterforingUtflyttning {
+get { return Data.GetValueOrDefault<bool>(Fältkod.AterforingUtflyttning); }
+set { Data.AddOrUpdateValue(Fältkod.AterforingUtflyttning, value); }
+}
+public bool AterforingHogVardeoverforing {
+get { return Data.GetValueOrDefault<bool>(Fältkod.AterforingHogVardeoverforing); }
+set { Data.AddOrUpdateValue(Fältkod.AterforingHogVardeoverforing, value); }
+}
+public bool AterforingInternaForvarv {
+get { return Data.GetValueOrDefault<bool>(Fältkod.AterforingInternaForvarv); }
+set { Data.AddOrUpdateValue(Fältkod.AterforingInternaForvarv, value); }
 }
 public long Specifikationsnummer {
 get { return Data.GetValueOrDefault<long>(Fältkod.Specifikationsnummer); }
@@ -578,6 +730,20 @@ RanteinkomstEjKonto = 503,
 AnnanInkomst = 504,
 [Fälttyp(Fälttyp.SpecifikationsNummer,-1)]
 Specifikationsnummer = 570,
+[Fälttyp(Fälttyp.Belopp,10)]
+UnderlagForInvesteraravdrag = 528,
+[Fälttyp(Fälttyp.Belopp,10)]
+TotUnderlagInvesteraravdrag = 529,
+[Fälttyp(Fälttyp.Kryss,-1)]
+Betalningsar = 530,
+[Fälttyp(Fälttyp.Kryss,-1)]
+AterforingAvyttring = 531,
+[Fälttyp(Fälttyp.Kryss,-1)]
+AterforingUtflyttning = 532,
+[Fälttyp(Fälttyp.Kryss,-1)]
+AterforingHogVardeoverforing = 533,
+[Fälttyp(Fälttyp.Kryss,-1)]
+AterforingInternaForvarv = 534,
 [Fälttyp(Fälttyp.Belopp,10)]
 AvdragenUtlandskSkatt = 2,
 [Fälttyp(Fälttyp.Belopp,10)]

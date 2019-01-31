@@ -42,7 +42,7 @@ namespace SKV260.Kontrolluppgifter
 
 	var fl = CSV.ParseFile(Host.ResolvePath("../files/kontrolluppgifter_4.0/bilaga_2b_fältlista_4.0.csv"));
 
-	var kuIncludeSet = new HashSet<string>{ "KU20", "KU31", "KU32" };
+	var kuIncludeSet = new HashSet<string>{ "KU20", "KU28", "KU31", "KU32" };
 
 	var mm = new Multiset<string, string>();
 
