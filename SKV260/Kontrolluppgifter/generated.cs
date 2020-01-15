@@ -11,6 +11,7 @@ namespace SKV260.Kontrolluppgifter
 // 202 -> NamnUppgiftslamnare,Text,50,TEXT
 // 203 -> Inkomstar,Inkomstar,-1,DATUM
 // 205 -> Borttag,Kryss,-1,KRYSSRUTA
+// 210 -> Rattelse,Kryss,-1,KRYSSRUTA
 // 215 -> Inkomsttagare,Identitet,-1,PERSORGNR
 // 216 -> Fornamn,Text,50,TEXT
 // 217 -> Efternamn,Text,50,TEXT
@@ -39,6 +40,7 @@ namespace SKV260.Kontrolluppgifter
 // 002 -> AvdragenUtlandskSkatt,Belopp,10,HELTAL
 // 003 -> AvdragenKupongskatt,Belopp,10,HELTAL
 // 079 -> LandskodHemvist,Landskod,-1,LANDSKOD
+// 256 -> Hemviststat,Text,30,TEXT
 // 523 -> Depanummer,Belopp,12,HELTAL
 // 524 -> AndelAvDepan,Decimal,2,DECIMALTAL
 // 571 -> VPNamn,Text,50,TEXT
@@ -121,6 +123,10 @@ set { Data.AddOrUpdateValue(Fältkod.Inkomstar, value); }
 public bool Borttag {
 get { return Data.GetValueOrDefault<bool>(Fältkod.Borttag); }
 set { Data.AddOrUpdateValue(Fältkod.Borttag, value); }
+}
+public bool Rattelse {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Rattelse); }
+set { Data.AddOrUpdateValue(Fältkod.Rattelse, value); }
 }
 public string Inkomsttagare {
 get { return Data.GetValueOrDefault<string>(Fältkod.Inkomsttagare); }
@@ -254,6 +260,10 @@ set { Data.AddOrUpdateValue(Fältkod.Inkomstar, value); }
 public bool Borttag {
 get { return Data.GetValueOrDefault<bool>(Fältkod.Borttag); }
 set { Data.AddOrUpdateValue(Fältkod.Borttag, value); }
+}
+public bool Rattelse {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Rattelse); }
+set { Data.AddOrUpdateValue(Fältkod.Rattelse, value); }
 }
 public string Inkomsttagare {
 get { return Data.GetValueOrDefault<string>(Fältkod.Inkomsttagare); }
@@ -432,6 +442,10 @@ public bool Borttag {
 get { return Data.GetValueOrDefault<bool>(Fältkod.Borttag); }
 set { Data.AddOrUpdateValue(Fältkod.Borttag, value); }
 }
+public bool Rattelse {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Rattelse); }
+set { Data.AddOrUpdateValue(Fältkod.Rattelse, value); }
+}
 public string Inkomsttagare {
 get { return Data.GetValueOrDefault<string>(Fältkod.Inkomsttagare); }
 set { Data.AddOrUpdateValue(Fältkod.Inkomsttagare, value); }
@@ -483,6 +497,10 @@ set { Data.AddOrUpdateValue(Fältkod.FriAdress, value); }
 public string TIN {
 get { return Data.GetValueOrDefault<string>(Fältkod.TIN); }
 set { Data.AddOrUpdateValue(Fältkod.TIN, value); }
+}
+public string Hemviststat {
+get { return Data.GetValueOrDefault<string>(Fältkod.Hemviststat); }
+set { Data.AddOrUpdateValue(Fältkod.Hemviststat, value); }
 }
 public long AnnanInkomst {
 get { return Data.GetValueOrDefault<long>(Fältkod.AnnanInkomst); }
@@ -585,6 +603,10 @@ set { Data.AddOrUpdateValue(Fältkod.Inkomstar, value); }
 public bool Borttag {
 get { return Data.GetValueOrDefault<bool>(Fältkod.Borttag); }
 set { Data.AddOrUpdateValue(Fältkod.Borttag, value); }
+}
+public bool Rattelse {
+get { return Data.GetValueOrDefault<bool>(Fältkod.Rattelse); }
+set { Data.AddOrUpdateValue(Fältkod.Rattelse, value); }
 }
 public string Inkomsttagare {
 get { return Data.GetValueOrDefault<string>(Fältkod.Inkomsttagare); }
@@ -694,6 +716,8 @@ NamnUppgiftslamnare = 202,
 Inkomstar = 203,
 [Fälttyp(Fälttyp.Kryss,-1)]
 Borttag = 205,
+[Fälttyp(Fälttyp.Kryss,-1)]
+Rattelse = 210,
 [Fälttyp(Fälttyp.Identitet,-1)]
 Inkomsttagare = 215,
 [Fälttyp(Fälttyp.Text,50)]
@@ -750,6 +774,8 @@ AvdragenUtlandskSkatt = 2,
 AvdragenKupongskatt = 3,
 [Fälttyp(Fälttyp.Landskod,-1)]
 LandskodHemvist = 79,
+[Fälttyp(Fälttyp.Text,30)]
+Hemviststat = 256,
 [Fälttyp(Fälttyp.Belopp,12)]
 Depanummer = 523,
 [Fälttyp(Fälttyp.Decimal,2)]

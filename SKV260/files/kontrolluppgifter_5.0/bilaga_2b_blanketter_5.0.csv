@@ -1,0 +1,34 @@
+﻿Typ;Namn;SKV-nummer
+KU10;Från arbetsgivare m.fl.;2300
+KU13;Särskild inkomstskatt för utomlands bosatta (SINK);2340
+KU14;Pensionsgrundande inkomst och utbyte av kontrolluppgifter;2303
+KU16;Sjöinkomst;2306
+KU17;Särskild inkomstskatt (SINK) för utomlands bosatta med sjöinkomst;2307
+KU18;Pensions och försäkringsutbetalare m.fl.;2310
+KU19;Pensions och försäkringsutbetalare m.fl. Särskild inkomstskatt (SINK) för utomlands bosatta;2341
+KU20;Ränteinkomst;2323
+KU21;Obligationer;2320
+KU25;Ränteutgift;2336
+KU26;Tomträttsavgäld;2337
+KU28;Investeraravdrag;2335
+KU30;Investeringssparkonto - schablonintäkt;2312
+KU31;Utdelning m.m. på delägarrätter;2322
+KU32;Avyttring av delägar-/fordringsrätter;2318
+KU34;Avyttring/utfärdande/slutförande av optioner;2315
+KU35;Slutförande av terminer;2325
+KU40;Avyttring av fondandelar;2339
+KU41;Fondandelar - schablonintäkt;2313
+KU50;Pensionssparande;2338
+KU52;Utländsk försäkring;2327
+KU53;Förmedlad försäkring;2351
+KU55;Överlåtelse av bostadsrätt;2324
+KU65;Gåva;2314
+KU66;Förnybar el;2350
+KU67;Fackföreningsavgift;2326
+KU70;Näringsbidrag och royalty;2316
+KU71;Uttag från bl.a. skogskonto;2319
+KU72;Insättning på bl.a. skogskonto;2321
+KU73;Utdelning m.m. samfällighet;2317
+KU80;Betalning från utlandet;2329
+KU81;Betalning till utlandet;2328
+KupongS;Redovisning Kupongskatt i avstämningsbolag;3715
