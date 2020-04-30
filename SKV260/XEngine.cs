@@ -15,7 +15,7 @@ namespace SKV260
         private readonly string _version;
         private readonly XmlReaderSettings _xmlSettings;
 
-        public XEngine(int inkomstar, string version = "kontrolluppgifter_4.0")
+        public XEngine(int inkomstar, string version = "kontrolluppgifter_5.0")
         {
             _inkomstar = inkomstar;
             _version = version;
@@ -56,10 +56,10 @@ namespace SKV260
 
         public XDocument Generate()
         {
-            XNamespace xmlns = "http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/4.0";
+            XNamespace xmlns = "http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/5.0";
             XNamespace xsi = XNamespace.Get("http://www.w3.org/2001/XMLSchema-instance");
-            XNamespace schemaLocation = "http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/4.0 http://xmls.skatteverket.se/se/skatteverket/ai/kontrolluppgift/instans/Kontrolluppgifter_4.0.xsd";
-            XNamespace ku = "http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/4.0";
+            XNamespace schemaLocation = "http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/5.0 http://xmls.skatteverket.se/se/skatteverket/ai/kontrolluppgift/instans/Kontrolluppgifter_5.0.xsd";
+            XNamespace ku = "http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/5.0";
             var doc = new XDocument(new XDeclaration("1.0", "UTF-8", "no"));
             var root = new XElement(xmlns + "Skatteverket",
                     new XAttribute(XNamespace.Xmlns + "ku", ku),
