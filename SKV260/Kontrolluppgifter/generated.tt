@@ -149,6 +149,8 @@ namespace SKV260.Kontrolluppgifter
 			// get { return Data.GetValueOrDefault<long>(Fältkod.AvdragenSkatt); }
 			// set { Data.AddOrUpdateValue(Fältkod.AvdragenSkatt, value); }
 
+			XmlSummary(row);
+
 			WriteLine($"public {clrtype} {namn} {{");
 			WriteLine($"get {{ return Data.GetValueOrDefault<{clrtype}>(Fältkod.{namn}); }}");
 			WriteLine($"set {{ Data.AddOrUpdateValue(Fältkod.{namn}, value); }}");
@@ -188,6 +190,30 @@ namespace SKV260.Kontrolluppgifter
 }
 
 <#+
+void XmlSummary(string[] items)
+{
+	WriteLine("///<summary>");
+	XmlPara($"KU-typ", items[0]);
+	XmlPara($"FK", items[1]);
+	XmlPara($"Elementnamn XML-fil", items[2]);
+	XmlPara($"Obl", items[3]);
+	XmlPara($"Fälttyp", items[4]);
+	XmlPara($"SambandskontrollID", items[5]);
+	XmlPara($"SambandskontrollText", items[6]);
+	XmlPara($"Beskrivning", items[7]);
+	XmlPara($"Xml fält grupp", items[8]);
+	XmlPara($"SKVs tooltip i etjänst för direkt-registrering", items[9]);
+	WriteLine("///</summary>");
+}
+
+void XmlPara(string t, string s)
+{
+	if (!string.IsNullOrWhiteSpace(s))
+	{
+		WriteLine($"///<para>{t}: {Regex.Replace(s, "(\\t|\\r?\\n)+", " ")}</para>");
+	}
+}
+
 class Multimap<K, V> : Dictionary<K, List<V>>
 {
 	public void Add(K key, V item)
