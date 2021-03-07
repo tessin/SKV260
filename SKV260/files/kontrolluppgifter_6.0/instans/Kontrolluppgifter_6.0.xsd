@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/6.0"
+    xmlns="http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/6.0"
+    xmlns:ku="http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/6.0"
+    elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.0">
+  
+  <xs:import namespace="http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/6.0"
+    schemaLocation="../komponent/Kontrolluppgifter_COMPONENT_6.0.xsd" />
+  
+  <xs:annotation>
+    <xs:appinfo>
+      <SchemaMetadata xmlns="se/skatteverket/zl/SchemaMetadata/1.0"
+        xmlns:dc="http://purl.org/dc/elements/1.1/" 
+        xmlns:dcq="http://purl.org/dc/terms/">
+        <dc:title>Kontrolluppgifter</dc:title>
+        <dc:description>Kontrolluppgifter för Skatteverket</dc:description>
+        <dc:publisher>Skatteverket</dc:publisher>
+        <dc:creator>
+          <dcq:contact>KUPP projektet</dcq:contact>
+          <dcq:owner>Underhåll/Drift(PärH)</dcq:owner>
+        </dc:creator>
+        <dc:date>
+          <dcq:created>2020-09-23 - Version 6.0.
+          </dcq:created>
+        </dc:date>
+        <dc:subject>Hanterar kontrolluppgifter.
+        </dc:subject>
+      </SchemaMetadata>
+    </xs:appinfo>
+  </xs:annotation>
+	<xs:element name="Skatteverket">
+		<xs:annotation>
+			<xs:documentation>Kontrolluppgifter</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ku:Avsandare"/>
+				<xs:element ref="ku:Blankettgemensamt"/>
+				<xs:element ref="ku:Blankett" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="omrade" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

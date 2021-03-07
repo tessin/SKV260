@@ -2,6 +2,7 @@
 <#@ assembly name="System.Core" #>
 <#@ assembly name="System.Xml" #>
 <#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="System.Web" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Text.RegularExpressions" #>
@@ -19,7 +20,7 @@ namespace SKV260.Kontrolluppgifter
 	// read XML structure from schema file
 	var schema = new Dictionary<string, XElement>();
 	{
-		var c = XElement.Load(Host.ResolvePath(@"..\files\kontrolluppgifter_5.0\komponent\Kontrolluppgifter_COMPONENT_5.0.xsd"));
+		var c = XElement.Load(Host.ResolvePath(@"..\files\kontrolluppgifter_6.0\komponent\Kontrolluppgifter_COMPONENT_6.0.xsd"));
 
 		foreach(var el in c.Elements(xsd + "complexType")) {
 			schema.Add((string)el.Attribute("name"), el);
@@ -28,24 +29,25 @@ namespace SKV260.Kontrolluppgifter
 
 	var blanketter = new Dictionary<string, string>();
 
-	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_5.0\bilaga_2b_blanketter_5.0.csv")).Skip(1))
+	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_6.0\Bilaga 2b - Blanketter 6.0.csv")).Skip(1))
 	{
 		blanketter.Add(row[0], row[2]);
 	}
 
 	var ftmap = new Dictionary<string, string>();
 
-	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_5.0\bilaga_1_fälttyper_5.0.csv")))
+	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_6.0\Bilaga 1 - Fälttyper 6.0.csv")))
 	{
 		ftmap.Add(row[0], row[1]);
 	}
 
-	var fl = CSV.ParseFile(Host.ResolvePath("../files/kontrolluppgifter_5.0/bilaga_2b_fältlista_5.0.csv"));
+	var fl = CSV.ParseFile(Host.ResolvePath("../files/kontrolluppgifter_6.0/Bilaga 2b - Fältlista 6.0.csv"));
+	var flH = fl.First();
 
-	var kuIncludeSet = new HashSet<string>{ "KU20", "KU28", "KU31", "KU32" };
+	var kuIncludeSet = new HashSet<string>{ "KU20", "KU25", "KU28", "KU31", "KU32" };
 
 	var mm = new Multiset<string, string>();
-
+	
 	foreach (var row in fl.Skip(1).Where(row => kuIncludeSet.Contains(row[0])))
 	{
 		var ku = row[0];
@@ -62,7 +64,7 @@ namespace SKV260.Kontrolluppgifter
 
 	foreach (var item in mm) {
 		if (item.Value.Count > 1) WriteLine($"// varning: källdata är inte konsekvent");
-		WriteLine($"// {item.Key} -> {string.Join(", ", item.Value)}");
+		//WriteLine($"// {item.Key} -> {string.Join(", ", item.Value)}");
 	}
 	
 	// ftypemap takes precedence over dtypemap
@@ -79,6 +81,10 @@ namespace SKV260.Kontrolluppgifter
 		{ "PERSORGNR", "string" },
 		{ "DATUM", "DateTime" },
 		{ "DECIMALTAL", "decimal" },
+
+		// nytt 2020
+		{ "REGION", "string" },
+		{ "VERKSAMHETSOMRADE", "string" },
 	};
 
 	foreach (var g in fl.Skip(1).Where(row => kuIncludeSet.Contains(row[0])).GroupBy(row => row[0]))
@@ -145,6 +151,8 @@ namespace SKV260.Kontrolluppgifter
 			// get { return Data.GetValueOrDefault<long>(Fältkod.AvdragenSkatt); }
 			// set { Data.AddOrUpdateValue(Fältkod.AvdragenSkatt, value); }
 
+			XmlSummary(flH, row);
+
 			WriteLine($"public {clrtype} {namn} {{");
 			WriteLine($"get {{ return Data.GetValueOrDefault<{clrtype}>(Fältkod.{namn}); }}");
 			WriteLine($"set {{ Data.AddOrUpdateValue(Fältkod.{namn}, value); }}");
@@ -184,6 +192,23 @@ namespace SKV260.Kontrolluppgifter
 }
 
 <#+
+void XmlSummary(string[] headers, string[] items)
+{
+	WriteLine("///<summary>");
+
+	for (int i = 0; i < headers.Length; i++)
+	{
+		var s = items[i];
+		
+		if (!string.IsNullOrWhiteSpace(s))
+		{
+			WriteLine($"///<para>{headers[i]}: {System.Web.HttpUtility.HtmlEncode(Regex.Replace(s, "(\\t|\\r?\\n)+", " "))}</para>");
+		}
+	}
+	
+	WriteLine("///</summary>");
+}
+
 class Multimap<K, V> : Dictionary<K, List<V>>
 {
 	public void Add(K key, V item)

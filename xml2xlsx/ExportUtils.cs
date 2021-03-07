@@ -26,8 +26,8 @@ namespace SKV260
 
         public static int ExportXslx(XDocument source, string destFn)
         {
-            XNamespace xmlns = "http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/5.0";
-            XNamespace ku = "http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/5.0";
+            XNamespace xmlns = "http://xmls.skatteverket.se/se/skatteverket/ai/instans/infoForBeskattning/6.0";
+            XNamespace ku = "http://xmls.skatteverket.se/se/skatteverket/ai/komponent/infoForBeskattning/6.0";
 
             var root = source.Root;
 
