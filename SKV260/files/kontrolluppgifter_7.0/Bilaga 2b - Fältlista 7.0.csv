@@ -1,0 +1,1246 @@
+﻿KU-typ;FK;Elementnamn XML-fil;Obl;Fälttyp;SambandskontrollID;SambandskontrollText;Beskrivning;Xml fält grupp;SKVs tooltip i etjänst för direkt-registrering;;;
+KU10;011;KontantBruttolonMm;N;Belopp10;010,183;"Fk011 ska finnas om Fk205, Fk012, Fk013, Fk020, Fk025, Fk030-035, Fk039 och Fk050-051 alla saknas.
+Fk011 får inte finnas om Fk093 saknas.";Kontant bruttolön m.m. ;;Här fyller du i bruttolönen till anställd med socialavgiftsavtal dvs. ett avtal mellan en utländsk arbetsgivare som saknar fast driftställe i Sverige och den anställda om att den anställda ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe. Obs! Ersättningar som inte är underlag för arbetsgivaravgifter, t.ex. ersättningar under 1 000 kr och vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp redovisar du i fält 031.;;;
+KU10;012;FormanUtomBilDrivmedel;N;Belopp10;015,017,184;"Om en/flera av Fk041, Fk043 finns och Fk031 och Fk025 saknas måste Fk012 >= 0.
+Fk012 eller Fk031 eller Fk025 måste finnas om Fk021 eller Fk022 finns.
+Fk012 får inte finnas om Fk093 saknas.";Skattepliktiga förmåner utom bilförmån och drivmedel vid bilförmån;;Här redovisar du det sammanlagda värdet av andra skattepliktiga förmåner än bilförmån och förmån av fritt drivmedel vid bilförmån. ;;;
+KU10;013;BilformanUtomDrivmedel;N;Belopp7;185;Fk013 får inte finnas om Fk093 saknas.;Skattepliktig bilförmån utom drivmedel;;Vid värdering av bilförmån räknas del av en månad som en hel månad. Om den anställde har betalat för bilförmånen med sin nettolön ska du minska förmånsvärdet med det beloppet. Om förmånsvärdet blir 0 kr (eller negativt), skriver du 0.;;;
+KU10;018;DrivmedelVidBilforman;N;Belopp7;186;Fk018 får inte finnas om Fk093 saknas;Drivmedel vid bilförmån;;Här fyller du i förmån av fritt drivmedel vid bilförmån, värderat till marknadsvärdet x 1,2. Uppräkningen med 1,2 gäller när du redovisar förmånen i kontrolluppgiften. Vid beräkningen av arbetsgivaravgifter värderas det fria drivmedlet till marknadsvärdet, utan uppräkning.;;;
+KU10;020;AndraKostnadsers;N;Belopp7;;;Kostnadsersättningar som inte kryssats i ruta 050 - 051;;;;;
+KU10;021;UnderlagRutarbete;N;Belopp7;;;Underlag för skattereduktion för rutarbete;;Om den anställde haft förmån av rutarbete, fält 012, kan den anställde ha rätt till skattereduktion. Fyll i underlaget för skattereduktionen här. Obs! Underlaget motsvarar inte alltid värdet av förmånen. I underlaget får du bara ta med kostnader för arbete och inte kostnader för material, utrustning och resor, trots att de ingår vid värderingen av förmånen. Om den anställde av sin nettolön har betalat för förmånen, ska förmånens värde minskas men inte underlaget för skattereduktion.;;;
+KU10;022;UnderlagRotarbete;N;Belopp7;;;Underlag för skattereduktion för rotarbete;;Om den anställde haft förmån av rotarbete, fält 012, kan den anställde ha rätt till skattereduktion. Fyll i underlaget för skattereduktionen här. Obs! Underlaget motsvarar inte alltid värdet av förmånen. I underlaget får du bara ta med kostnader för arbete och inte kostnader för material, utrustning och resor, trots att de ingår vid värderingen av förmånen. Om den anställde av sin nettolön har betalat för förmånen, ska förmånens värde minskas men inte underlaget för skattereduktion.;;;
+KU10;025;ErsMEgenavgifter;N;Belopp10;139;Fk025 får inte finnas om Fk093 finns.;Ersättningar som ligger till grund för egenavgifter;;"Här redovisar du framför allt ersättningar till
+personer, som utan att vara näringsidkare ändå ska
+betala egenavgifter.";;;
+KU10;030;Tjanstepension;N;Belopp10;;;Tjänstepension;;Här fyller du i pension som betalats ut till före detta anställda eller till deras efterlevande. Obs! Avgångsvederlag inte räknas som pension utan som lön och ska därför redovisas i fält 011.;;;
+KU10;031;ErsEjSocAvg;N;Belopp10;;;Ersättningar som inte är underlag för socialavgifter ;;Här redovisar du bl.a. ersättningar (lön och förmåner) som under året inte uppgått till 1 000 kr per mottagare, vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp och ersättningar till anställda som inte omfattas av svensk socialförsäkring.;;;
+KU10;032;ErsEjSocAvgEjJobbavd;N;Belopp10;;;Ersättningar som inte är underlag för socialavgifter och som inte ger rätt till skattereduktion för arbetsinkomst (jobbskatteavdrag);;"Här redovisar du vissa livräntor, ärvd royalty om den ursprungliga förvärvskällan varit tjänst (till exempel ”engångsförfattare”), utbetalningar från vinstandelsstiftelse och periodiskt understöd.
+Obs! Utbetalningar från vinstandelsstiftelse ska ibland behandlas som lön och då redovisas i fält 011.";;;
+KU10;035;Forskarskattenamnden;N;Belopp10;;;Vissa inte skattepliktiga ersättningar till utländska experter m.fl. enligt beslut från Forskarskattenämnden;;Här fyller du i förmåner och ersättningar som är skattefria enligt beslut från Forskarskattenämnden. ;;;
+KU10;037;VissaAvdrag;N;Belopp6;;;Vissa avdrag ;;Här fyller du i vissa speciella avgifter som den anställde får dra av i sin inkomstdeklaration, till exempel avgifter som den anställde betalar i tjänsten för egen eller efterlevandes pension. ;;;
+KU10;039;Hyresersattning;N;Belopp7;;;Hyresersättning;;Här fyller du i hyra som arbetsgivaren betalat till den anställde och som är inkomst av kapital för den anställde.;;;
+KU10;041;BostadSmahus;N;Kryss;;;Bostad småhus;;;;;
+KU10;043;BostadEjSmahus;N;Kryss;;;Bostad ej småhus;;;;;
+KU10;048;FormanHarJusterats;N;Kryss;038;Om Fk048 finns och Fk031 och Fk025 saknas måste Fk012 eller Fk013 finnas.;Förmån har justerats;;Här markerar du om arbetsgivaren har fått beslut från Skatteverket om justering av förmånsvärdet för kost, bostad eller bilförmån. Obs! Du ska fylla i det justerade värdet i fält där förmån redovisas.;;;
+KU10;049;FormanSomPension;N;Kryss;040;Om Fk049 finns måste Fk012 eller Fk013 finnas.;Förmån som pension;;Här markerar du om en anställd gått i pension, men behållit en förmån som pension. Du ska då fylla i värdet av förmånen i fält där förmån redovisas.;;;
+KU10;050;Bilersattning;N;Kryss;;;Enligt schablon Bilersättning;;;;;
+KU10;051;Traktamente;N;Kryss;;;Enligt schablon Traktamente;;;;;
+KU10;059;PersonaloptionForvarvAndel;N;Kryss;;;Personaloption som inte ska förmånsbeskattas har utnyttjats för förvärv av andel;;;;;
+KU10;060;Arbetsstallenummer;N;ArbetsstalleNummer;;;Arbetsställenummer från SCB;;;;;
+KU10;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU10;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU10;093;SocialAvgiftsAvtal;N;Kryss;;;Socialavgiftsavtal finns;;Om en utländsk arbetsgivare som saknar fast driftställe i Sverige har träffat en överenskommelse (socialavgiftsavtal) med den anställde om att den anställde ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe ska du markera här. Den kontanta ersättningen redovisar du i fält 011 och förmåner i fält 012, 013 och 018.;;;
+KU10;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Person-/organisationsnummer;Uppgiftslamnare;;;;
+KU10;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU10;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU10;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU10;210;Rattelse;N;Kryss;;;;;;;;
+KU10;215;Inkomsttagare;N;Identitet;056,173;"Fk215 ska finnas om Fk222 och Fk224 saknas.
+Fk215 får inte börja med 16 om Fk011, Fk012, Fk013 eller Fk025 har värde >0 ";Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU10;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU10;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU10;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU10;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU10;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU10;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU10;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU10;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU10;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU10;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU10;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU10;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU10;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Du ska alltid fylla i specifikationsnummer. Det kan vara ett valfritt nummer, men om du lämnar du flera kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare ändra eller ta bort en kontrolluppgift måste du ange samma specifikationsnummer som ursprungligen lämnades.;;;
+KU13;011;KontantBruttolonMm;N;Belopp10;011,183;"Fk011 ska finnas om Fk205, Fk012, Fk013, Fk030, Fk031 och Fk036 alla saknas.
+Fk011 får inte finnas om Fk093 saknas.";Kontant bruttolön m.m. ;;Här fyller du i bruttolönen till anställd med socialavgiftsavtal dvs. ett avtal mellan en utländsk arbetsgivare som saknar fast driftställe i Sverige och den anställda om att den anställda ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe. Obs! Ersättningar som inte är underlag för arbetsgivaravgifter, t.ex. ersättningar under 1 000 kr och vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp redovisar du i fält 031.;;;
+KU13;012;FormanUtomBilDrivmedel;N;Belopp10;016,184;"Om en/flera av Fk041, Fk043 finns och Fk031 saknas måste Fk012 >= 0.
+Fk012 får inte finnas om Fk093 saknas.";Skattepliktiga förmåner utom bilförmån och drivmedel vid bilförmån;;Här redovisar du det sammanlagda värdet av andra skattepliktiga förmåner än bilförmån och förmån av fritt drivmedel vid bilförmån. ;;;
+KU13;013;BilformanUtomDrivmedel;N;Belopp7;185;Fk013 får inte finnas om Fk093 saknas.;Skattepliktig bilförmån utom drivmedel;;Vid värdering av bilförmån räknas del av en månad som en hel månad. Om den anställde har betalat för bilförmånen med sin nettolön ska du minska förmånsvärdet med det beloppet. Om förmånsvärdet blir 0 kr (eller negativt), skriver du 0.;;;
+KU13;018;DrivmedelVidBilforman;N;Belopp7;186;Fk018 får inte finnas om Fk093 saknas;Drivmedel vid bilförmån;;Här fyller du i förmån av fritt drivmedel vid bilförmån, värderat till marknadsvärdet x 1,2. Uppräkningen med 1,2 gäller när du redovisar förmånen i kontrolluppgiften. Vid beräkningen av arbetsgivaravgifter värderas det fria drivmedlet till marknadsvärdet, utan uppräkning.;;;
+KU13;030;Tjanstepension;N;Belopp10;;;Tjänstepension;;Här fyller du i pension som betalats ut till före detta anställda eller till deras efterlevande. Obs! Avgångsvederlag inte räknas som pension utan som lön och ska därför redovisas i fält 011.;;;
+KU13;031;ErsEjSocAvg;N;Belopp10;;;Ersättningar som inte är underlag för socialavgifter ;;Här redovisar du bl.a. ersättningar (lön och förmåner) som under året inte uppgått till 1 000 kr per mottagare, vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp och ersättningar till anställda som inte omfattas av svensk socialförsäkring.;;;
+KU13;036;ErsFormanBostadMmSINK;N;Belopp6;;;Ersättning/förmån avseende bostad samt resa till och från anställning/förrättning ;;Här redovisar ersättningar som är undantagna från särskild inkomstskatt och arbetsgivaravgifter om du redovisar på KU13.;;;
+KU13;041;BostadSmahus;N;Kryss;;;Bostad småhus;;;;;
+KU13;043;BostadEjSmahus;N;Kryss;;;Bostad ej småhus;;;;;
+KU13;048;FormanHarJusterats;N;Kryss;039;Om Fk048 finns och Fk031 saknas måste Fk012 eller Fk013 finnas.;Förmån har justerats;;Här markerar du om arbetsgivaren har fått beslut från Skatteverket om justering av förmånsvärdet för kost, bostad eller bilförmån. Obs! Du ska fylla i det justerade värdet i fält där förmån redovisas.;;;
+KU13;059;PersonaloptionForvarvAndel;N;Kryss;;;Personaloption som inte ska förmånsbeskattas har utnyttjats för förvärv av andel;;;;;
+KU13;060;Arbetsstallenummer;N;ArbetsstalleNummer;;;Arbetsställenummer från SCB;;;;;
+KU13;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU13;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU13;081;LandskodMedborgare;N;Landskod;048;Fk081 ska finnas om Fk250 finns.;Medborgarskap;Inkomsttagare;;;;
+KU13;093;SocialAvgiftsAvtal;N;Kryss;;;Socialavgiftsavtal finns;;Om en utländsk arbetsgivare som saknar fast driftställe i Sverige har träffat en överenskommelse (socialavgiftsavtal) med den anställde om att den anställde ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe ska du markera här. Den kontanta ersättningen redovisar du i fält 011 och förmåner i fält 012, 013 och 018.;;;
+KU13;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Person-/organisationsnummer;Uppgiftslamnare;;;;
+KU13;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU13;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU13;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU13;210;Rattelse;N;Kryss;;;;;;;;
+KU13;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Svenskt Person-/samordningsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU13;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU13;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU13;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU13;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU13;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU13;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU13;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU13;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU13;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU13;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU13;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU13;250;MedborgarskapEjSvenskt;N;Text50;;;Medborgarskap;Inkomsttagare;;;;
+KU13;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU13;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU14;011;KontantBruttolonMm;N;Belopp10;012,183;"Fk011 måste finnas om Fk205, Fk012, Fk013, Fk020, Fk025, Fk030, Fk031, Fk035 och Fk050-051 alla saknas.
+Fk011 får inte finnas om Fk093 saknas.";Kontant bruttolön m.m. ;;Här fyller du i bruttolönen till anställd med socialavgiftsavtal dvs. ett avtal mellan en utländsk arbetsgivare som saknar fast driftställe i Sverige och den anställda om att den anställda ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe. Obs! Ersättningar som inte är underlag för arbetsgivaravgifter, t.ex. ersättningar under 1 000 kr och vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp redovisar du i fält 031.;;;
+KU14;012;FormanUtomBilDrivmedel;N;Belopp10;015,017,184;"Om en/flera av Fk041, Fk043 finns och Fk031 och Fk025 saknas måste Fk012 >= 0.
+Fk012 eller Fk031 eller Fk025 måste finnas om Fk021 eller Fk022 finns.
+Fk012 får inte finnas om Fk093 saknas.";Skattepliktiga förmåner utom bilförmån och drivmedel vid bilförmån;;Här redovisar du det sammanlagda värdet av andra skattepliktiga förmåner än bilförmån och förmån av fritt drivmedel vid bilförmån. ;;;
+KU14;013;BilformanUtomDrivmedel;N;Belopp7;185;Fk013 får inte finnas om Fk093 saknas.;Skattepliktig bilförmån utom drivmedel;;Vid värdering av bilförmån räknas del av en månad som en hel månad. Om den anställde har betalat för bilförmånen med sin nettolön ska du minska förmånsvärdet med det beloppet. Om förmånsvärdet blir 0 kr (eller negativt), skriver du 0.;;;
+KU14;018;DrivmedelVidBilforman;N;Belopp7;186;Fk018 får inte finnas om Fk093 saknas;Drivmedel vid bilförmån;;Här fyller du i förmån av fritt drivmedel vid bilförmån, värderat till marknadsvärdet x 1,2. Uppräkningen med 1,2 gäller när du redovisar förmånen i kontrolluppgiften. Vid beräkningen av arbetsgivaravgifter värderas det fria drivmedlet till marknadsvärdet, utan uppräkning.;;;
+KU14;020;AndraKostnadsers;N;Belopp7;;;Kostnadsersättningar som inte kryssats i ruta 050 - 051;;;;;
+KU14;021;UnderlagRutarbete;N;Belopp7;;;Underlag för skattereduktion för rutarbete;;Om den anställde haft förmån av rutarbete, fält 012, kan den anställde ha rätt till skattereduktion. Fyll i underlaget för skattereduktionen här. Obs! Underlaget motsvarar inte alltid värdet av förmånen. I underlaget får du bara ta med kostnader för arbete och inte kostnader för material, utrustning och resor, trots att de ingår vid värderingen av förmånen. Om den anställde av sin nettolön har betalat för förmånen, ska förmånens värde minskas men inte underlaget för skattereduktion.;;;
+KU14;022;UnderlagRotarbete;N;Belopp7;;;Underlag för skattereduktion för rotarbete;;Om den anställde haft förmån av rotarbete, fält 012, kan den anställde ha rätt till skattereduktion. Fyll i underlaget för skattereduktionen här. Obs! Underlaget motsvarar inte alltid värdet av förmånen. I underlaget får du bara ta med kostnader för arbete och inte kostnader för material, utrustning och resor, trots att de ingår vid värderingen av förmånen. Om den anställde av sin nettolön har betalat för förmånen, ska förmånens värde minskas men inte underlaget för skattereduktion.;;;
+KU14;025;ErsMEgenavgifter;N;Belopp10;139;Fk025 får inte finnas om Fk093 finns.;Ersättningar som ligger till grund för egenavgifter;;Här redovisar du framför allt ersättningar till personer, som utan att vara näringsidkare ändå ska betala egenavgifter.;;;
+KU14;030;Tjanstepension;N;Belopp10;;;Tjänstepension;;Här fyller du i pension som betalats ut till före detta anställda eller till deras efterlevande. Obs! Avgångsvederlag inte räknas som pension utan som lön och ska därför redovisas i fält 011.;;;
+KU14;031;ErsEjSocAvg;N;Belopp10;;;Ersättningar som inte är underlag för socialavgifter ;;Här redovisar du bl.a. ersättningar (lön och förmåner) som under året inte uppgått till 1 000 kr per mottagare, vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp och ersättningar till anställda som inte omfattas av svensk socialförsäkring.;;;
+KU14;035;Forskarskattenamnden;N;Belopp10;;;Vissa inte skattepliktiga ersättningar till utländska experter m.fl. enligt beslut från Forskarskattenämnden;;Här fyller du i förmåner och ersättningar som är skattefria enligt beslut från Forskarskattenämnden. ;;;
+KU14;041;BostadSmahus;N;Kryss;;;Bostad småhus;;;;;
+KU14;043;BostadEjSmahus;N;Kryss;;;Bostad ej småhus;;;;;
+KU14;048;FormanHarJusterats;N;Kryss;038;Om Fk048 finns och Fk031 och Fk025 saknas måste Fk012 eller Fk013 finnas.;Förmån har justerats;;Här markerar du om arbetsgivaren har fått beslut från Skatteverket om justering av förmånsvärdet för kost, bostad eller bilförmån. Obs! Du ska fylla i det justerade värdet i fält där förmån redovisas.;;;
+KU14;049;FormanSomPension;N;Kryss;040;Om Fk049 finns måste Fk012 eller Fk013 finnas.;Förmån som pension;;Här markerar du om en anställd gått i pension, men behållit en förmån som pension.  Du ska då fylla i värdet av förmånen i fält där förmån redovisas.;;;
+KU14;050;Bilersattning;N;Kryss;;;Enligt schablon Bilersättning;;;;;
+KU14;051;Traktamente;N;Kryss;;;Enligt schablon Traktamente;;;;;
+KU14;059;PersonaloptionForvarvAndel;N;Kryss;;;Personaloption som inte ska förmånsbeskattas har utnyttjats för förvärv av andel;;;;;
+KU14;060;Arbetsstallenummer;N;ArbetsstalleNummer;;;Arbetsställenummer från SCB;;;;;
+KU14;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU14;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU14;081;LandskodMedborgare;N;Landskod;048;Fk081 ska finnas om Fk250 finns.;Medborgarskap;Inkomsttagare;;;;
+KU14;090;LandskodArbetsland;N;Landskod;049;Fk090 ska finnas om Fk251 finns.;Arbetsland;;"Här anger du det land där arbetet har utförts. Om den
+anställde har arbetat i flera olika länder under året, ska du lämna en kontrolluppgift för varje land.";;;
+KU14;091;UtsandUnderTid;N;SandUnderTid;;;Inkomsttagaren utsänd för arbete utomlands;;Om utsändningen sträcker sig över ett årsskifte ska den totala utsändningstiden anges.;;;
+KU14;092;Kategori;N;KategoriKU14;050;Fk092 ska finnas om Fk205 saknas.;Ett av alternativen A - F ska fyllas i;;Här lämnar du uppgift som ligger till grund för vilket lands socialförsäkringssystem den anställde omfattas av. Om den anställde omfattas av svensk socialförsäkring ska du fylla i ett av alternativen A–E.;;;
+KU14;093;SocialAvgiftsAvtal;N;Kryss;;;Socialavgiftsavtal finns;;Om en utländsk arbetsgivare som saknar fast driftställe i Sverige har träffat en överenskommelse (socialavgiftsavtal) med den anställde om att den anställde ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe ska du markera här. Den kontanta ersättningen redovisar du i fält 011 och förmåner i fält 012, 013 och 018.;;;
+KU14;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Person-/organisationsnummer;Uppgiftslamnare;;;;
+KU14;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU14;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU14;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU14;210;Rattelse;N;Kryss;;;;;;;;
+KU14;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person- /organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU14;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU14;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU14;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU14;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU14;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU14;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU14;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU14;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU14;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU14;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU14;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU14;250;MedborgarskapEjSvenskt;N;Text50;;;Inkomsttagarens medborgarskap;Inkomsttagare;;;;
+KU14;251;Arbetsland;N;Text50;;;Inkomsttagarens arbetsland;;;;;
+KU14;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU14;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU16;011;KontantBruttolonMm;N;Belopp10;013,183;"Fk011 måste finnas om Fk205, Fk012, Fk020, Fk031 och Fk051 alla saknas.
+Fk011 får inte finnas om Fk093 saknas.";Kontant bruttolön m.m.;;Här fyller du i bruttolönen till anställd med socialavgiftsavtal dvs. ett avtal mellan en utländsk arbetsgivare som saknar fast driftställe i Sverige och den anställda om att den anställda ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe. Obs! Ersättningar som inte är underlag för arbetsgivaravgifter, t.ex. ersättningar under 1 000 kr och vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp redovisar du i fält 031.;;;
+KU16;012;FormanUtomBilDrivmedel;N;Belopp10;184;Fk012 får inte finnas om Fk093 saknas.;Skattepliktiga förmåner utom bilförmån och drivmedel vid bilförmån;;Här redovisar du bland annat värdet av förmån av fri kost. Även vissa andra förmåner än fri kost, till exempel fri hälso- och sjukvård, fria läkemedel och fria privata resor (för anställda hos färjerederierna) redovisar du i fält 012. ;;;
+KU16;020;AndraKostnadsers;N;Belopp7;;;Kostnadsersättningar som inte kryssats i ruta 051;;;;;
+KU16;021;UnderlagRutarbete;N;Belopp7;;;Underlag för skattereduktion för rutarbete;;Om den anställde haft förmån av rutarbete, fält 012, kan den anställde ha rätt till skattereduktion. Fyll i underlaget för skattereduktionen här. Obs! Underlaget motsvarar inte alltid värdet av förmånen. I underlaget får du bara ta med kostnader för arbete och inte kostnader för material, utrustning och resor, trots att de ingår vid värderingen av förmånen. Om den anställde av sin nettolön har betalat för förmånen, ska förmånens värde minskas men inte underlaget för skattereduktion.;;;
+KU16;022;UnderlagRotarbete;N;Belopp7;;;Underlag för skattereduktion för rotarbete;;Om den anställde haft förmån av rotarbete, fält 012, kan den anställde ha rätt till skattereduktion. Fyll i underlaget för skattereduktionen här. Obs! Underlaget motsvarar inte alltid värdet av förmånen. I underlaget får du bara ta med kostnader för arbete och inte kostnader för material, utrustning och resor, trots att de ingår vid värderingen av förmånen. Om den anställde av sin nettolön har betalat för förmånen, ska förmånens värde minskas men inte underlaget för skattereduktion.;;;
+KU16;026;Fartygssignal;N;Fartygssignal;031;Fk026 måste finnas om Fk205 saknas.;Fartygssignal;;Här anger du fartygssignalen, fartygets identitet, med fyra tecken. Anges även för arbete ombord på utländska fartyg (EES-handelsfartyg).  Om fartygssignalen har fler än fyra tecken ska du ange de första fyra tecknen.;;;
+KU16;027;AntalDagarSjoinkomst;N;Dagar;032;Fk027 måste finnas om Fk205 saknas.;Antal dagar med sjöinkomst;;;;;
+KU16;028;NarfartFjarrfart;N;NarfartFjarrfart;033;Fk028 måste finnas om Fk205 saknas.;Närfart/Fjärrfart;;;;;
+KU16;031;ErsEjSocAvg;N;Belopp10;;;Ersättningar som inte är underlag för socialavgifter ;;Här redovisar du bl.a. ersättningar (lön och förmåner) som under året inte uppgått till 1 000 kr per mottagare, vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp och ersättningar till anställda som inte omfattas av svensk socialförsäkring.;;;
+KU16;051;Traktamente;N;Kryss;;;Enligt schablon Traktamente;;;;;
+KU16;060;Arbetsstallenummer;N;ArbetsstalleNummer;;;Arbetsställenummer från SCB;;;;;
+KU16;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU16;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU16;093;SocialAvgiftsAvtal;N;Kryss;;;Socialavgiftsavtal finns;;Om en utländsk arbetsgivare som saknar fast driftställe i Sverige har träffat en överenskommelse (socialavgiftsavtal) med den anställde om att den anställde ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe ska du markera här. Den kontanta ersättningen redovisar du i fält 011 och förmåner i fält 012.;;;
+KU16;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Person-/organisationsnummer;Uppgiftslamnare;;;;
+KU16;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU16;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU16;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU16;210;Rattelse;N;Kryss;;;;;;;;
+KU16;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU16;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU16;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU16;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU16;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU16;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU16;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU16;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU16;223;FartygetsNamn;N;Text50;064;Fk223 ska finnas om Fk205 saknas.;Fartygets namn;;;;;
+KU16;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU16;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU16;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU16;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU16;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU16;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU17;011;KontantBruttolonMm;N;Belopp10;014,183;"Fk011 måste finnas om Fk205, Fk012 och Fk031 alla saknas.
+Fk011 får inte finnas om Fk093 saknas.";Kontant bruttolön m.m.;;Här fyller du i bruttolönen till anställd med socialavgiftsavtal dvs. ett avtal mellan en utländsk arbetsgivare som saknar fast driftställe i Sverige och den anställda om att den anställda ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe. Obs! Ersättningar som inte är underlag för arbetsgivaravgifter, t.ex. ersättningar under 1 000 kr och vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp redovisar du i fält 031.;;;
+KU17;012;FormanUtomBilDrivmedel;N;Belopp10;184;Fk012 får inte finnas om Fk093 saknas.;Skattepliktiga förmåner utom bilförmån och drivmedel vid bilförmån;;Här redovisar du bland annat värdet av förmån av fri kost. Även vissa andra förmåner än fri kost, till exempel fri hälso- och sjukvård, fria läkemedel och fria privata resor (för anställda hos färjerederierna) redovisar du i fält 012. ;;;
+KU17;026;Fartygssignal;N;Fartygssignal;031;Fk026 måste finnas om Fk205 saknas.;Fartygssignal;;Här anger du fartygssignalen, fartygets identitet, med fyra tecken. Anges även för arbete ombord på utländska fartyg (EES-handelsfartyg).  Om fartygssignalen har fler än fyra tecken ska du ange de första fyra tecknen.;;;
+KU17;027;AntalDagarSjoinkomst;N;Dagar;032;Fk027 måste finnas om Fk205 saknas.;Antal dagar med sjöinkomst;;;;;
+KU17;028;NarfartFjarrfart;N;NarfartFjarrfart;033;Fk028 måste finnas om Fk205 saknas.;Närfart/Fjärrfart;;;;;
+KU17;031;ErsEjSocAvg;N;Belopp10;;;Ersättningar som inte är underlag för socialavgifter ;;Här redovisar du bl.a. ersättningar (lön och förmåner) som under året inte uppgått till 1 000 kr per mottagare, vissa ersättningar till idrottsutövare under ett halvt prisbasbelopp och ersättningar till anställda som inte omfattas av svensk socialförsäkring.;;;
+KU17;060;Arbetsstallenummer;N;ArbetsstalleNummer;;;Arbetsställenummer från SCB;;;;;
+KU17;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU17;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU17;081;LandskodMedborgare;N;Landskod;048;Fk081 ska finnas om Fk250 finns.;Medborgarskap;Inkomsttagare;;;;
+KU17;093;SocialAvgiftsAvtal;N;Kryss;;;Socialavgiftsavtal finns;;Om en utländsk arbetsgivare som saknar fast driftställe i Sverige har träffat en överenskommelse (socialavgiftsavtal) med den anställde om att den anställde ska redovisa och betala arbetsgivaravgifterna i arbetsgivarens ställe ska du markera här. Den kontanta ersättningen redovisar du i fält 011 och förmåner i fält 012.;;;
+KU17;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Person-/organisationsnummer;Uppgiftslamnare;;;;
+KU17;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU17;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU17;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU17;210;Rattelse;N;Kryss;;;;;;;;
+KU17;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Svenskt person-/samordningsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU17;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU17;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU17;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU17;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU17;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU17;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU17;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU17;223;FartygetsNamn;N;Text50;064;Fk223 ska finnas om Fk205 saknas.;Fartygets namn;;;;;
+KU17;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU17;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU17;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU17;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU17;250;MedborgarskapEjSvenskt;N;Text50;;;Medborgarskap;Inkomsttagare;;;;
+KU17;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU17;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU18;001;AvdragenSkatt;N;Belopp10;001;Fk001 måste finnas om Fk205, Fk004 och Fk005 saknas.;Avdragen skatt;;;;;
+KU18;004;Ersattningskod;N;Ersattningskod;007;Om Fk005 finns ska Fk004 finnas.;Typ av ersättning;;;;;
+KU18;005;ErsattningBelopp;N;Belopp10;008;Om Fk004 finns ska Fk005 finnas.;Ersättningsbelopp;;;;;
+KU18;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU18;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU18;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU18;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU18;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU18;210;Rattelse;N;Kryss;;;;;;;;
+KU18;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU18;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU18;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU18;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU18;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU18;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU18;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU18;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU18;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU18;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU18;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU18;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU18;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU18;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU19;001;AvdragenSkatt;N;Belopp10;001;Fk001 måste finnas om Fk205, Fk004 och Fk005 saknas.;Avdragen skatt;;Här anges hur mycket särskild inkomstskatt, SINK, arbetsgivaren har dragit av (efter ett beslut om SINK från Skatteverket).;;;
+KU19;004;Ersattningskod;N;Ersattningskod;007;Om Fk005 finns ska Fk004 finnas.;Typ av ersättning;;;;;
+KU19;005;ErsattningBelopp;N;Belopp10;008;Om Fk004 finns ska Fk005 finnas.;Ersättningsbelopp ;;;;;
+KU19;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU19;081;LandskodMedborgare;N;Landskod;048;Fk081 ska finnas om Fk250 finns.;Medborgarskap;Inkomsttagare;;;;
+KU19;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU19;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU19;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU19;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Ta bort tidigare inlämnad kontrolluppgift;;;;;
+KU19;210;Rattelse;N;Kryss;;;;;;;;
+KU19;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Svenskt person-/samordningsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU19;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU19;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU19;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU19;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU19;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU19;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU19;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU19;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU19;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU19;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU19;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU19;250;MedborgarskapEjSvenskt;N;Text50;;;Medborgarskap;Inkomsttagare;;;;
+KU19;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU19;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU20;001;AvdragenSkatt;N;Belopp10;;;Avdragen preliminär skatt;;;;;
+KU20;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU20;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU20;077;Fodelseort;N;Text35;;;Födelseort;Inkomsttagare;Fyll i födelseort om den uppgiften gäller är bosatt utomlands och uppgift om utländskt skatteregistreringsnummer saknas.;;;
+KU20;078;LandskodFodelseort;N;Landskod;046;Fk078 ska finnas om Fk077 finns.;Landskod;Inkomsttagare;Land där födelseorten ligger.;;;
+KU20;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU20;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU20;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU20;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU20;210;Rattelse;N;Kryss;;;;;;;;
+KU20;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU20;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU20;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU20;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU20;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU20;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU20;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU20;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU20;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU20;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU20;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU20;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU20;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU20;500;Ranteinkomst;N;Belopp10;070;Fk500 måste finnas om Fk205, Fk001, Fk503 och Fk504 saknas.;Ränteinkomst;;;;;
+KU20;502;Forfogarkonto;N;Kryss;071;Fk502 får inte finnas om Fk503 eller Fk504 finns.;Förfogarkonto (fler än fem);;Markera här om kontot innehas gemensamt av fler än fem personer (förfogarkonto). Då får hela räntan för kontot redovisas på en enda kontrolluppgift. Kontrolluppgiften lämnas med personnummer på den som svarar för kontot.;;;
+KU20;503;RanteinkomstEjKonto;N;Belopp10;;;Ränteinkomst, ej konto;;Här redovisas summan av tillgodoräknad eller utbetald ränta från annat än inlåningskonton i bank.;;;
+KU20;504;AnnanInkomst;N;Belopp7;;;Annan inkomst;;Här redovisas annan inkomst än ränteinkomst.;;;
+KU20;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU21;001;AvdragenSkatt;N;Belopp10;;;Avdragen preliminär skatt;;;;;
+KU21;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU21;077;Fodelseort;N;Text35;;;Födelseort;Inkomsttagare;Fyll i födelseort om den uppgiften gäller är bosatt utomlands och uppgift om utländskt skatteregistreringsnummer saknas.;;;
+KU21;078;LandskodFodelseort;N;Landskod;046;Fk078 ska finnas om Fk077 finns.;Land;Inkomsttagare;Land där födelseorten ligger.;;;
+KU21;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU21;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU21;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU21;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU21;210;Rattelse;N;Kryss;;;;;;;;
+KU21;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU21;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU21;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU21;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU21;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU21;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU21;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU21;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU21;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU21;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU21;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU21;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU21;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU21;504;AnnanInkomst;N;Belopp7;;;Annan inkomst;;Här redovisas löpande avkastning som inte är ränta, t.ex. beräknat utifrån en oförutsedd variabel, såsom ett aktieindex.;;;
+KU21;520;RantaFordringsratter;N;Belopp10;075;Fk520 måste finnas om Fk205, Fk001, Fk522, Fk504, Fk525 och Fk599 saknas.;Sammanlagd ränta, fordringsrätter;;;;;
+KU21;522;UtbetaltIVissaFall;N;Belopp10;167;Fk522 får inte finnas om Fk599 finns.;Utbetalt belopp i vissa fall;;Här redovisas utbetalning som avser även annat än ränta. T.ex. redovisas här hela utbetalda beloppet för en nollkupongare när den uppgiftsskyldige saknar uppgift om räntebeloppet.;;;
+KU21;523;Depanummer;N;Belopp12;;;Depånummer;;Depånummer ska alltid anges för samägda depåer. Anges med maximalt 12 siffror (inga bokstäver).;;;
+KU21;524;AndelAvDepan;N;Decimal2;076;Om Fk524 finns ska också Fk523 finnas.;Andel av depån;;Om en depå innehas av två eller flera personer och beloppen i kontrolluppgiften avser hela depån anges här ägd andel för den uppgiften avser. Andelen anges med upp till två decimaler. OBS! Avdragen skatt anges alltid individuellt.;;;
+KU21;525;ErhallenRantekompensation;N;Belopp10;;;Erhållen räntekompensation;;"Här redovisas räntekompensation för upplupen
+ränta vid överlåtelse av fordringsrätt.";;;
+KU21;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU21;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Namn på fordringsrätten;;Namnet ska alltid anges om ISIN är utländskt (börjar på annan landskod än SE) eller om ISIN saknas.;;;
+KU21;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU21;573;AvyttradTillISK;N;Kryss;086;Om Fk573 finns måste Fk522 finnas.;Avyttrad till investeringssparkonto;;Markera här om kontrolluppgiften avser en överföring av en obligation till ett investeringssparkonto.;;;
+KU21;599;OkandVarde;N;Kryss;;;Okänt värde;;Markering för när en sakutdelning ännu inte fått ett fastställt värde vid tiden för inlämning av kontrolluppgiften.;;;
+KU25;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU25;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU25;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU25;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU25;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU25;210;Rattelse;N;Kryss;;;;;;;;
+KU25;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU25;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU25;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU25;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU25;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU25;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU25;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU25;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU25;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU25;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU25;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU25;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU25;540;AvdragsgillRanta;N;Belopp10;081;Fk540 ska finnas om Fk205, Fk541 och Fk543 saknas.;Betald och för året avdragsgill ränta;;Här redovisas under inkomståret betald ränta som avser tiden fram till 31 januari året efter inkomståret.;;;
+KU25;541;TotaltInbetaldRanta;N;Belopp10;082;Om Fk541 finns och är större än noll och Fk540 finns så ska Fk541 vara >= Fk540;Totalt inbetald ränta (anges endast om förskotts-ränta erlagts som inte är avdragsgill för året);;Här redovisas all ränta som betalats under inkomståret.;;;
+KU25;543;BetaldRantekompensation;N;Belopp10;;;Betald räntekompensation;;;;;
+KU25;544;GemensamtLan;N;Kryss;;;Gemensamt lån för fler än fem personer där långivaren inte kan ange vilka samtliga personer är;;Markera här om kontrolluppgiften avser utgiftsränta på gemensamt lån som fler än fem personer har. Kontrolluppgiften lämnas med personnummer på den som svarar för lånet.;;;
+KU25;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU26;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU26;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU26;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU26;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU26;210;Rattelse;N;Kryss;;;;;;;;
+KU26;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU26;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU26;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU26;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU26;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU26;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU26;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU26;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU26;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU26;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU26;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU26;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU26;560;BetaldTomtrattsavgald;N;Belopp7;083;Om Fk205 saknas ska Fk560 finnas.;Betald tomträttsavgäld;;;;;
+KU26;561;Fastighetsbeteckning;N;Text36;084;Om Fk205 saknas ska Fk561 finnas.;Fastighetsbeteckning;;;;;
+KU26;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU28;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU28;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU28;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU28;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU28;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU28;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU28;210;Rattelse;N;Kryss;;;;;;;;
+KU28;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU28;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU28;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU28;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU28;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU28;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU28;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU28;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU28;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU28;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU28;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU28;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU28;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU28;528;UnderlagForInvesteraravdrag;N;Belopp10;077,135;"Fk528 ska finnas om Fk529 finns.
+Fk528 ska vara <= Fk529.";Underlag för investeraravdrag;;Ange underlag för investeraravdrag för den uppgiften avser. Högsta underlag är 1 300 000 kr.;;;
+KU28;529;TotUnderlagInvesteraravdrag;N;Belopp10;136;Fk529 ska finnas om Fk528 finns.;Totalt underlag för investeraravdrag;;Ange totalt underlag för investeraravdrag, dvs det fysiska personer betalat för andelar i företaget. Maximala beloppet är 20 000 000 kr.;;;
+KU28;530;Betalningsar;N;Kryss;164;Fk530 får inte finnas om Fk528 saknas.;Inbetalning gjord året före inkomståret;;Markera här om betalning av andelarna gjordes året före inkomståret, men villkoren för investeraravdrag uppfylldes först under inkomståret.;;;
+KU28;531;AterforingAvyttring;N;Kryss;080,078,079;"Fk531 får inte finnas om Fk528 finns.
+Fk531 får inte finnas om Fk529 finns.
+Fk531 får inte finnas om Fk530 finns.";Återföring på grund av avyttring;;Markera här om andelarna avyttrats.;;;
+KU28;532;AterforingUtflyttning;N;Kryss;147,155,158;"Fk532 får inte finnas om Fk528 finns.
+Fk532 får inte finnas om Fk529 finns.
+Fk532 får inte finnas om Fk530 finns.";Återföring på grund av utflyttning;;Markera här om den uppgiften avser  upphört att vara skattskyldig i Sverige för kapitalvinst på andelarna.;;;
+KU28;533;AterforingHogVardeoverforing;N;Kryss;148,156,159;"Fk533 får inte finnas om Fk528 finns.
+Fk533 får inte finnas om Fk529 finns.
+Fk533 får inte finnas om Fk530 finns.";Återföring på grund av för hög värdeöverföring;;Markera här om den uppgiften avser (eller någon närstående) under något av de fem närmaste åren efter betalningsåret tar emot en värdeöverföring från företaget överstigande jämförelsebeloppet.;;;
+KU28;534;AterforingInternaForvarv;N;Kryss;149,157,160;"Fk534 får inte finnas om Fk528 finns.
+Fk534 får inte finnas om Fk529 finns.
+Fk534 får inte finnas om Fk530 finns.";Återföring på grund av vissa interna förvärv;;Markera här om företaget under de två åren närmast efter betalningsåret genomför vissa interna förvärv.;;;
+KU28;535;DatumForvarv;N;Datum;187;Fk535 ska finnas om Fk528 finns.;Datum när andelarna förvärvades;;Här anges datumet för när andelarna förvärvades. ;;;
+KU28;536;Region;N;Region;188;Fk536 ska finnas om Fk528 finns.;Region där företaget finns (NUTS 2-nivå);;Här väljs regionen där företaget finns. Var företaget är geografiskt beläget bestäms utifrån den indelning i territoriella enheter som gäller enligt den s.k. NUTS 2-nivån. ;;;
+KU28;537;Verksamhetsomrade;N;Verksamhetsomrade;189;Fk537 ska finnas om Fk528 finns.;Företagets verksamhetsområde (Nace-gruppnivå);;Här anges företagets verksamhetsområde genom att uppge Nace-kod. Nace-koden är en statistisk kod som beskriver företagets verksamhet och motsvaras av de tre första siffrorna i SNI-koden. SNI-koden framgår av det registerutdrag företaget fått vid registrering. ;;;
+KU28;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU30;002;AvdragenUtlandskSkatt;N;Belopp10;;;Avdragen utländsk skatt;;"Här anges eventuell innehållen utländsk källskatt som kan ha dragits på t.ex. utdelningar på aktier på investeringssparkontot. Beloppet anges i svenska kronor. Observera att hela den innehållna utländska
+källskatten ska redovisas oavsett vad som framgår av ett skatteavtal.";;;
+KU30;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU30;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU30;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU30;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU30;210;Rattelse;N;Kryss;;;;;;;;
+KU30;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU30;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU30;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU30;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU30;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU30;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU30;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU30;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU30;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU30;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU30;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU30;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU30;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU30;815;Schablonintakt;N;Belopp10;133;Om Fk205 saknas ska Fk815 finnas.;Schablonintäkt;;;;;
+KU30;817;Kontonummer;N;Text30;;;Kontonummer;;Här anges själva kontonumret för aktuellt investeringssparkonto, alltså inte depånummer eller liknande uppgift.;;;
+KU31;001;AvdragenSkatt;N;Belopp10;;;Avdragen preliminär skatt;;;;;
+KU31;002;AvdragenUtlandskSkatt;N;Belopp10;005;Fk002 får ej vara större än Fk574+Fk504.;Avdragen utländsk skatt;;Här anges eventuell innehållen utländsk källskatt som dragits på utdelningen. Beloppet anges i svenska kronor. Observera att hela den innehållna utländska källskatten ska redovisas oavsett vad som framgår av ett skatteavtal.;;;
+KU31;003;AvdragenKupongskatt;N;Belopp10;006,134,150;"Om Fk574 finns får Fk003 inte vara större än Fk574.
+Fk003 får inte finnas om Fk001 och/eller Fk002 finns.
+Om Fk581 finns får Fk003 inte vara större än Fk581.";Innehållen svensk kupongskatt;;Innehållen kupongskatt anges i hela kronor avrundat nedåt.;;;
+KU31;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU31;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU31;077;Fodelseort;N;Text35;;;Födelseort;Inkomsttagare;Fyll i födelseort om den uppgiften gäller är bosatt utomlands och uppgift om utländskt skatteregistreringsnummer saknas.;;;
+KU31;078;LandskodFodelseort;N;Landskod;046;Fk078 ska finnas om Fk077 finns.;Land;Inkomsttagare;Land där födelseorten ligger.;;;
+KU31;079;LandskodHemvist;N;Landskod;047;Fk079 ska finnas om Fk256 finns.;Hemviststat;Inkomsttagare;;;;
+KU31;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU31;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU31;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU31;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU31;210;Rattelse;N;Kryss;;;;;;;;
+KU31;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU31;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU31;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU31;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU31;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU31;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU31;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU31;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU31;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU31;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU31;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU31;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU31;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU31;256;Hemviststat;N;Text30;;;;Inkomsttagare;;;;
+KU31;504;AnnanInkomst;N;Belopp7;;;Annan inkomst;;Här redovisas bl.a. avkastning på delägarrätt beräknad utifrån en oförutsedd variabel såsom ett aktieindex, återbetalning vid nedsättning av fondförvaltningsavgift och utdelningsersättningar och premier som erhålls vid värdepapperslån.;;;
+KU31;523;Depanummer;N;Belopp12;;;Depånummer;;Depånummer ska alltid anges för samägda depåer. Anges med maximalt 12 siffror (inga bokstäver).;;;
+KU31;524;AndelAvDepan;N;Decimal2;076;Om Fk524 finns ska också Fk523 finnas.;Andel av depån;;Om en depå innehas av två eller flera personer och beloppen i kontrolluppgiften avser hela depån anges här ägd andel för den uppgiften avser. Andelen anges med upp till två decimaler. OBS! Avdragen skatt anges alltid individuellt.;;;
+KU31;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU31;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Namn på aktien/andelen;;Namnet ska alltid anges om ISIN är utländskt, dvs börjar på annan landskod än SE, eller om ISIN saknas. Bolagsnamn ska alltid anges för svenska fåmansbolag utan ISIN.;;;
+KU31;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU31;574;UtbetaldUtdelning;N;Belopp10;088,168;"Fk574 ska finnas om Fk205, Fk001, Fk504, Fk581 och Fk599 saknas.
+Fk574 får inte finnas om Fk599 finns.";Utbetald utdelning m.m.;;;;;
+KU31;581;AnnanKupongErsattning;N;Belopp10;092;Fk581 får inte finnas om Fk574 finns.;Annan kupongskattepliktig ersättning än utdelning;;;;;
+KU31;599;OkandVarde;N;Kryss;;;Okänt värde;;Markering för när en sakutdelning ännu inte fått ett fastställt värde vid tiden för inlämning av kontrolluppgiften.;;;
+KU31;853;Avstamningsdag;N;Datum;;;Avstämningsdag (fylls endast i vid flera utdelningar per år);;Avstämningsdagen är lika med utdelningstillfället.;;;
+KU32;061;Delagare;N;Kryss;;;Delägare m.fl. i fåmansföretag;;"Här markerar du om ditt företag är ett: • fåmansföretag och om den person som kontrolluppgiften gäller är företagsledare, närstående till sådan person eller delägare i företaget
+• fåmanshandelsbolag och om den person kontrolluppgiften gäller är företagsledare eller närstående till en sådan person utan att vara delägare i handelsbolaget.
+";;;
+KU32;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU32;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU32;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU32;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU32;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU32;210;Rattelse;N;Kryss;;;;;;;;
+KU32;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU32;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU32;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU32;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU32;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU32;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU32;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU32;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU32;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU32;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU32;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU32;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU32;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU32;523;Depanummer;N;Belopp12;;;Depånummer;;Depånummer ska alltid anges för samägda depåer. Anges med maximalt 12 siffror (inga bokstäver).;;;
+KU32;524;AndelAvDepan;N;Decimal2;076;Om Fk524 finns ska också Fk523 finnas.;Andel av depån;;Om en depå innehas av två eller flera personer och beloppen i kontrolluppgiften avser hela depån anges här ägd andel för den uppgiften avser. Andelen anges med upp till två decimaler. OBS! Avdragen skatt anges alltid individuellt.;;;
+KU32;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU32;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Namn på aktien/andelen;;Namnet ska alltid anges om ISIN är utländskt (börjar på annan landskod än SE) eller om ISIN saknas.;;;
+KU32;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU32;573;AvyttradTillISK;N;Kryss;;;Avyttrad till investeringssparkonto;;Markera här om kontrolluppgiften avser en överföring av en aktie/delägarrätt till ett investeringssparkonto.;;;
+KU32;576;AntalAvyttrade;N;Belopp12;089;Om Fk205 saknas ska Fk576 finnas.;Antal avyttrade;;Här anges antalet avyttrade delägarrätter eller belopp av fordringsrätter.;;;
+KU32;599;OkandVarde;N;Kryss;;;Okänt värde;;Markering för när en sakutdelning som avyttrats ännu inte fått ett fastställt värde vid tiden för inlämning av kontrolluppgiften.;;;
+KU32;810;ErhallenErsattning;N;Belopp10;090,169;"Om Fk205  och Fk599 saknas ska Fk810 finnas.
+Fk810 får inte finnas om Fk599 finns.";Erhållen ersättning;;;;;
+KU34;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU34;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU34;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU34;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU34;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU34;210;Rattelse;N;Kryss;;;;;;;;
+KU34;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU34;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU34;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU34;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU34;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU34;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU34;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU34;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU34;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU34;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU34;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU34;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU34;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU34;523;Depanummer;N;Belopp12;;;Depånummer;;Depånummer ska alltid anges för samägda depåer. Anges med maximalt 12 siffror (inga bokstäver).;;;
+KU34;524;AndelAvDepan;N;Decimal2;076;Om Fk524 finns ska också Fk523 finnas.;Andel av depån;;Om en depå innehas av två eller flera personer och beloppen i kontrolluppgiften avser hela depån anges här ägd andel för den uppgiften avser. Andelen anges med upp till två decimaler. OBS! Avdragen skatt anges alltid individuellt.;;;
+KU34;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU34;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Beteckning på optionen;;Namnet ska alltid anges om ISIN är utländskt (börjar på annan landskod än SE) eller om ISIN saknas.;;;
+KU34;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU34;573;AvyttradTillISK;N;Kryss;087;Fk573 får inte finnnas om Fk813 finns.;Avyttrad till investeringssparkonto;;Markera här om kontrolluppgiften avser en överföring av en option till ett investeringssparkonto.;;;
+KU34;578;AntalKontrakt;N;Belopp10;091;Om Fk205 saknas ska Fk578 finnas.;Antal kontrakt;;Här anges antal kontrakt (för standardiserade optioner) eller antal optioner (för icke standardiserade optioner, t.ex. warranter eller teckningsoptioner).;;;
+KU34;599;OkandVarde;N;Kryss;;;Okänt värde;;Markering för när en sakutdelning som avyttrats ännu inte fått ett fastställt värde vid tiden för inlämning av kontrolluppgiften.;;;
+KU34;810;ErhallenErsattning;N;Belopp10;128,169;"Fk810 ska finnas om Fk205 och FK599 och Fk813 saknas.
+Fk810 får inte finnas om Fk599 finns.";Erhållen ersättning;;;;;
+KU34;812;TypAvOption;N;TypOption;130;Om Fk205 saknas ska Fk812 finnas.;Typ av option;;;;;
+KU34;813;OptionenForfallen;N;Kryss;131,172;"Fk813 får inte finnas om Fk810 finns.
+Fk813 får inte finnas om Fk599 finns.";Optionen förfallen;;;;;
+KU35;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU35;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU35;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU35;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU35;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU35;210;Rattelse;N;Kryss;;;;;;;;
+KU35;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU35;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU35;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU35;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU35;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU35;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU35;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU35;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU35;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU35;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU35;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU35;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU35;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU35;523;Depanummer;N;Belopp12;;;Depånummer;;Depånummer ska alltid anges för samägda depåer. Anges med maximalt 12 siffror (inga bokstäver).;;;
+KU35;524;AndelAvDepan;N;Decimal2;076;Om Fk524 finns ska också Fk523 finnas.;Andel av depån;;Om en depå innehas av två eller flera personer och beloppen i kontrolluppgiften avser hela depån anges här ägd andel för den uppgiften avser. Andelen anges med upp till två decimaler. OBS! Avdragen skatt anges alltid individuellt.;;;
+KU35;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU35;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Beteckning på terminen;;Namnet ska alltid anges om ISIN är utländskt (börjar på annan landskod än SE) eller om ISIN saknas.;;;
+KU35;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU35;573;AvyttradTillISK;N;Kryss;;;Avyttrad till investeringssparkonto;;Markera här om kontrolluppgiften avser en överföring av en termin till ett investeringssparkonto.;;;
+KU35;578;AntalKontrakt;N;Belopp10;091;Om Fk205 saknas ska Fk578 finnas.;Antal kontrakt;;Här redovisas antal omsatta kontrakt. Det gäller såväl vid redovisning av helt nettade forwardskontrakt som vid redovisning av stängning av forwardskontrakt och futureskontrakt.;;;
+KU35;599;OkandVarde;N;Kryss;;;Okänt värde;;Markering för när en sakutdelning som avyttrats ännu inte fått ett fastställt värde vid tiden för inlämning av kontrolluppgiften.;;;
+KU35;810;ErhallenErsattning;N;Belopp10;129,169;"Fk810 ska finnas om Fk205 och Fk811 saknas.
+Fk810 får inte finnas om Fk599 finns.";Erhållen ersättning;;För helt nettade forwardskontrakt, vid stängning av futures- och forwardskontrakt och kvittning av futureskontrakt redovisas det erhållna nettobeloppet efter avdrag för kostnader här.;;;
+KU35;811;ErlagdErsattning;N;Belopp10;;;Erlagd ersättning;;För helt nettade forwardskontrakt, vid stängning av futures- och forwardskontrakt och kvittning av futureskontrakt redovisas det erlagda nettobeloppet med tillägg för kostnader här.;;;
+KU35;814;Redovisningsmetod;N;Redovisningsmetod;132;Om Fk205 saknas ska Fk814 finnas.;Redovisningsmetod;;;;;
+KU40;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU40;077;Fodelseort;N;Text35;;;Födelseort;Inkomsttagare;Fyll i födelseort om den uppgiften gäller är bosatt utomlands och uppgift om utländskt skatteregistreringsnummer saknas.;;;
+KU40;078;LandskodFodelseort;N;Landskod;046;Fk078 ska finnas om Fk077 finns.;Landskod;Inkomsttagare;Land där födelseorten ligger.;;;
+KU40;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU40;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU40;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU40;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU40;210;Rattelse;N;Kryss;;;;;;;;
+KU40;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU40;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU40;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU40;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU40;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU40;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU40;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU40;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU40;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU40;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU40;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU40;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU40;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU40;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU40;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Namn på fonden;;Namnet ska alltid anges om ISIN är utländskt (börjar på annan landskod än SE) eller om ISIN saknas.;;;
+KU40;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU40;573;AvyttradTillISK;N;Kryss;;;Avyttrad till investeringssparkonto;;Markera här om kontrolluppgiften avser en överföring av en fond till ett investeringssparkonto.;;;
+KU40;600;Kapitalvinst;N;Belopp10;093;Fk600 ska finnas när Fk205, Fk601 och Fk810 saknas.;Kapitalvinst;;Om både vinst och förlust finns för samma fond och samma person ska båda beloppen redovisas var för sig. Kapitalvinst avrundas nedåt till helt krontal.;;;
+KU40;601;Kapitalforlust;N;Belopp10;;;Kapitalförlust;;Kapitalförlust ska tas upp utan reducering till 70 procent och anges med hela krontal - avrundas uppåt.;;;
+KU40;602;FondInteMarknadsnoterad;N;Kryss;;;Fonden är inte marknadsnoterad;;;;;
+KU40;606;Rantefond;N;Kryss;;;Fonden är en räntefonnd;;"Markera här om fonden är en räntefond. Med räntefond avses i detta fall fond som bara placerar
+i svenska fordringsrätter.";;;
+KU40;810;ErhallenErsattning;N;Belopp10;094;Fk810 får inte finnas om Fk600 och/eller Fk601 finns.;Erhållen ersättning;;Om uppgift saknas om anskaffningsutgift, ska uppgift lämnas om ersättningen vid avyttringen i stället för kapitalvinsten eller kapitalförlusten. Ersättningen vid avyttringen motsvarar vad fondandelsägaren erhållit vid inlösen m.m. efter avdrag för utgifterna för avyttringen.;;;
+KU41;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU41;077;Fodelseort;N;Text35;;;Födelseort;Inkomsttagare;Fyll i födelseort om den uppgiften gäller är bosatt utomlands och uppgift om utländskt skatteregistreringsnummer saknas.;;;
+KU41;078;LandskodFodelseort;N;Landskod;046;Fk078 ska finnas om Fk077 finns.;Landskod;Inkomsttagare;Land där födelseorten ligger.;;;
+KU41;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU41;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU41;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU41;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU41;210;Rattelse;N;Kryss;;;;;;;;
+KU41;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU41;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU41;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU41;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU41;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU41;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU41;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU41;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU41;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU41;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU41;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU41;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU41;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU41;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU41;571;VPNamn;N;Text50;085,170;"Fk571 ska finnas om Fk572 saknas och Fk205 saknas.
+Fk571 ska finnas om (Fk572 finns och de två första tecknen i Fk572 inte är SE och Fk201 inte är 165561128074
+";Namn på fonden;;Namnet ska alltid anges om ISIN är utländskt (börjar på annan landskod än SE) eller om ISIN saknas.;;;
+KU41;572;ISIN;N;Isin;;;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KU41;815;Schablonintakt;N;Belopp10;133;Om Fk205 saknas ska Fk815 finnas.;Schablonintäkt;;;;;
+KU50;075;LandskodUL;N;Landskod;043;Fk075 ska finnas om Fk506 finns.;Land;Uppgiftslamnare;;;;
+KU50;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Svenskt organisationsnummer;Uppgiftslamnare;;;;
+KU50;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU50;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU50;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU50;210;Rattelse;N;Kryss;;;;;;;;
+KU50;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/samordningsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU50;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU50;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU50;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU50;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU50;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU50;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU50;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU50;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU50;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU50;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU50;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU50;506;ULUtlandsktOrgnr;N;Text13;072;Fk506 ska finnas om Fk075 finns.;Utländskt organisationsnummer;Uppgiftslamnare;;;;
+KU50;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU50;620;BetaldPremie;N;Belopp10;095;Om Fk205 saknas ska Fk620 finnas.;Betald premie i aktuell valuta/Inbetalning på pensionssparkonto;;;;;
+KU52;075;LandskodUL;N;Landskod;044;Om Fk205 saknas ska Fk075 finnas.;Land;Uppgiftslamnare;;;;
+KU52;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Svenskt organisationsnummer;Uppgiftslamnare;;;;
+KU52;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU52;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU52;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU52;210;Rattelse;N;Kryss;;;;;;;;
+KU52;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU52;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU52;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU52;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU52;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU52;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU52;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU52;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU52;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU52;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU52;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU52;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU52;506;ULUtlandsktOrgnr;N;Text13;073;Om Fk205 saknas ska Fk506 finnas.;Utländskt organisationsnummer;Uppgiftslamnare;;;;
+KU52;507;Forsakringsavtalsnummer;N;Text30;074;Fk507 ska finnas om Fk654=P.;Försäkringsavtalsnummer;;Anges alltid för sådana försäkringar där det tidigare har anmälts en flytt, men också när kontrolluppgiften avser en pensionsförsäkring (markeras i fält 654).;;;
+KU52;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU52;652;Kapitalunderlag;N;Belopp12;107;Om Fk205 saknas ska Fk652 finnas.;Kapitalunderlag;;Försäkringens värde vid utgången av året före inkomståret.;;;
+KU52;654;TypForsakring;N;TypForsakring;108;Om Fk205 saknas ska Fk654 finnas.;Typ av försäkring;;;;;
+KU53;075;LandskodUL;N;Landskod;044;Om Fk205 saknas ska Fk075 finnas.;Land;;;;;
+KU53;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU53;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU53;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU53;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU53;210;Rattelse;N;Kryss;;;;;;;;
+KU53;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU53;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU53;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU53;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU53;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU53;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU53;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU53;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU53;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU53;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU53;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU53;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU53;506;ULUtlandsktOrgnr;N;Text13;073;Om Fk205 saknas ska Fk506 finnas.;Utländskt organisationsnummer;;;;;
+KU53;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU53;680;NamnForsakrGivare;N;Text50;115;Fk680 ska finnas om Fk683 och Fk205 saknas.;Namn;;Ange namn och adress om den utländska försäkringsgivaren saknar svenskt registreringsnummer.;;;
+KU53;681;AdrForsakrGivare;N;Text50;116;Fk681 ska finnas om Fk683 och Fk205 saknas.;Adress;;Ange namn och adress om den utländska försäkringsgivaren saknar svenskt registreringsnummer.;;;
+KU53;682;PostadrForsakrGivare;N;Text50;117;Fk682 ska finnas om Fk683 och Fk205 saknas.;Postadress;;Ange namn och adress om den utländska försäkringsgivaren saknar svenskt registreringsnummer.;;;
+KU53;683;SvensktRegNr;N;Identitet;;;Svenskt registreringsnummer;;Ange alltid den utländske försäkringsgivarens svenska registreringsnummer om sådant finns.;;;
+KU55;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU55;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU55;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU55;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU55;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU55;210;Rattelse;N;Kryss;;;;;;;;
+KU55;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för en fysisk person eller särskilt dödsbonummer om sådant finns för ett dödsbo. För personer med samordningsnummer ska namn- och adressuppgifter fyll is i fält 216-221.;;;
+KU55;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU55;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU55;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU55;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU55;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU55;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU55;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU55;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU55;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU55;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Fyll i här om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU55;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU55;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU55;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid fyllas i. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU55;630;BostRattBeteckning;N;Text36;097;Om Fk205 saknas ska Fk630 finnas.;Bostadsrättens/ lägenhetens beteckning;;Fyll i den beteckning som bostadsrätten/lägenheten har hos bostadsföretaget. Det ska inte vara det fyrsiffriga lägenhetsnummer som används vid folkbokföringen.;;;
+KU55;631;Overlatelsedatum;N;Datum;098,099;"Om Fk205 saknas ska Fk631 finnas. 
+Fk631 får inte vara ett datum efter inkomståret Fk203.";Överlåtelsedatum (ÅÅÅÅMMDD);;Fyll i datum för bindande överlåtelse. Vid försäljning är det datumet när köpekontraktet undertecknades. Tillträdesdagen ska inte fyllas i.;;;
+KU55;632;OverlatenAndel;N;Decimal2-100;;;Överlåten andel i procent;;Fyll i överlåten andel i hela procent - t.ex. 50 om halva bostadsrätten har överlåtits. 100 procent behöver inte fyllas i.;;;
+KU55;633;OverlatelseArvBodeln;N;Kryss;100;Fk633 får inte finnas om Fk639 finns.;Överlåtelsen har skett genom arv, gåva, bodelning eller liknande;;Markera här om överlåtelsen har skett genom arv, gåva, bodelning, testamente eller liknande. Förutom markeringen ska enbart tidpunkten för överlåtelsen (fält 631) och överlåten andel (fält 632) fyllas i. Inga belopp. ;;;
+KU55;634;Overlatelsepris;N;Belopp10;101;Fk634 ska finnas om Fk205, Fk633 och Fk639 saknas.;Överlåtelsepris;;Fyll i försäljningspriset enligt köpekontraktet här. Om det har skett ett byte ska marknadsvärdet på den tillbytta tillgången tas upp som överlåtelsepris. Överlåtelsepriset får inte minskas med eventuella utgifter i samband med försäljningen. Har överlåtaren tagit emot, eller gjort, en betalning i samband med bytet ska denna öka respektive minska överlåtelsepriset.;;;
+KU55;635;InreRepFondOverlatelse;N;Belopp7;;;Bostadsrättens andel av innestående medel på inre reparationsfond vid överlåtelsen;;Fyll i överlåtarens andel av innestående medel i den inre reparationsfonden vid överlåtelsetidpunkten om den nya ägaren har övertagit de innestående medlen. Överlåtelsetidpunkt - se fält 631.;;;
+KU55;636;Kapitaltillskott;N;Belopp7;;;Kapitaltillskott;;Fyll i tillskotten här om överlåtaren har skjutit till kapital för amorteringar av bostadsföretagets lån eller för finansiering av bestämda ny-, till- eller ombyggnadsarbeten under innehavstiden. Vid överlåtelse av en bostadsrätt i ett oäkta bostadsföretag anges inbetalningar som har gjorts till bostadsföretaget utan krav på återbetalning.;;;
+KU55;638;OaktaBostadsftg;N;Kryss;;;Bostadsföretaget var oäkta (inte privatbostadsföretag) vid ingången av inkomståret.;;Markera här om bostadsföretaget är oäkta vid ingången av det år då den bindande överlåtelsen sker.;;;
+KU55;639;Tillaggskopeskilling;N;Belopp7;;;Tilläggsköpeskilling;;Tilläggsköpeskilling är ersättning för överlåtelsen utöver den tidigare utbetalda. Den ska beskattas hos överlåtaren det inkomstår då beloppet blir känt. Därför ska tilläggsköpeskilling i vissa fall redovisas på en kontrolluppgift för ett senare år än överlåtelseåret.;;;
+KU55;640;Forvarvsdatum;N;Datum;102,103;"Om Fk205 saknas ska Fk640 finnas.
+Fk640 får inte vara större än Fk631.";Förvärvsdatum (ÅÅÅÅMMDD);;Fyll i det datum när den överlåtna bostadsrätten förvärvades. Har andelar förvärvats vid flera tillfällen anges datumet för det allra första förvärvet. Om överlåtaren har förvärvat bostadsrätten genom gåva, arv, bodelning eller testamente anges det datum då den tidigare ägaren förvärvade bostadsrätten genom köp.;;;
+KU55;642;ForvarvArvBodeln;N;Kryss;;;Förvärvet har helt eller delvis skett genom arv, gåva, bodelning eller liknande;;Markera här om överlåtaren har förvärvat bostadsrätten helt eller delvis genom arv, testamente, gåva eller bodelning. ;;;
+KU55;643;Forvarvspris;N;Belopp10;104;Fk643 ska finnas om (Fk205, Fk633, Fk639, Fk642 och Fk645 saknas och Fk640 > 19831231);Förvärvspris;;"Förvärvspris kan vara: 
+-priset enligt köpekontraktet,
+-insatsen, upplåtelse- och överlåtelseavgifter vid upplåtelse från bostadsföretaget,
+-marknadsvärdet på tillgången som lämnats i utbyte mot bostadsrätten (justerat för eventuell betalning vid bytet), eller
+-tidigare ägares förvärvspris vid köp, upplåtelse eller byte om bostadsrätten har förvärvats genom arv, testamente, gåva eller bodelning. Förvärvpriset behöver inte fyllas i om bostadsrätten har förvärvats 1983 eller tidigare.";;;
+KU55;644;InreRepFondForvarv;N;Belopp7;;;Bostadsrättens andel av innestående medel på inre reparationsfond vid förvärvet;;Fyll i överlåtarens andel av medlen i den inre reparationsfonden vid förvärvet av bostadsrätten (tidigare ägares andel vid förvärvet om överlåtaren har förvärvat bostadsrätten genom arv, testamente, gåva eller bodelning). ;;;
+KU55;645;AndelBRFFormogenhet1974;N;Belopp10;;;Bostadsrättens andel av föreningens behållna förmögenhet den 1 januari 1974;;Fyll i överlåtarens andel av bostadsföretagets behållna förmögenhet den 1 januari 1974 om överlåtaren har förvärvat bostadsrätten före 1974 (tidigare ägares andel om överlåtaren har förvärvat bostadsrätten genom arv, testamente, gåva eller bodelning). Oäkta bostadsföretag ska inte lämna uppgiften.;;;
+KU55;646;GemensamIndividuell;N;GemensamIndividuell;106;Om Fk205 saknas ska Fk646 finnas.;Uppgifterna i denna blankett är;;Markera om uppgifterna i kontrolluppgiften är gemensamma eller individuella. De ska vara:                 -gemensamma om flera har överlåtit bostadsrätten, och var och en såväl har förvärvat som överlåtit lika stor andel och har samma förvärvspris.                      -individuella om en ensam ägare är överlåtare, eller om det finns flera delägare men bara någon eller några säljer sina andelar, eller om flera säljer gemensamt men har olika förvärvspris.                                 ;;;
+KU65;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslämnare;;;;
+KU65;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslämnare;;;;
+KU65;203;Inkomstar;J;Inkomstar;;;Period (år);;;;;
+KU65;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU65;210;Rattelse;N;Kryss;;;;;;;;
+KU65;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU65;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU65;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU65;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU65;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU65;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU65;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU65;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU65;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU65;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU65;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU65;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU65;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU65;621;MottagetGavobelopp;N;Belopp10;096;Om Fk205 saknas ska Fk621 finnas.;Mottaget gåvobelopp;;Gåvobeloppet ska vara minst 200 kr för att kunna ge skattereduktion.;;;
+KU66;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU66;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslämnare;;;;
+KU66;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslämnare;;;;
+KU66;203;Inkomstar;J;Inkomstar;;;Period (år);;;;;
+KU66;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU66;210;Rattelse;N;Kryss;;;;;;;;
+KU66;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU66;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU66;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU66;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU66;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU66;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU66;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU66;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU66;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU66;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU66;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU66;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU66;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU66;270;KWhMatatsIn;N;KWh10;067;Om Fk205 saknas ska Fk270 finnas.;Antal kwh som matats in i anslutningspunkten under året;;;;;
+KU66;271;KWhTagitsUt;N;KWh10;068;Om Fk205 saknas ska Fk271 finnas.;Antal kwh som tagits ut från anslutningspunkten under året;;;;;
+KU66;272;AnlaggningsID;N;AnlID;069;Om Fk205 saknas ska Fk272 finnas.;AnläggningsID;;Anges med 18 siffror och börjar alltid med 735999.;;;
+KU66;273;AndelIAnslPunkt;N;Decimal2;;;Andel i anslutningspunkten (i procent);;;;;
+KU66;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU70;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU70;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU70;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU70;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU70;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU70;210;Rattelse;N;Kryss;;;;;;;;
+KU70;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU70;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU70;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU70;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU70;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU70;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU70;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU70;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU70;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU70;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU70;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU70;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU70;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU70;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU70;716;Naringsbidrag;N;Belopp10;118;Fk716 får inte finnas om Fk717 finns.;Belopp som utbetalats/eftergetts;;"Här redovisas stöd utan återbetalningsskyldighet
+som lämnas till en näringsidkare för
+näringsverksamheten av staten m.fl. KU70 behöver inte lämnas då den som mottar näringsbidraget är en juridisk person.";;;
+KU70;717;Royalty;N;Belopp10;119;Fk717 ska finnas om Fk205 och Fk716 saknas.;Utbetalt belopp;;Här redovisas royalty m.m. som utbetalts till enskild näringsidkare eller juridisk person. I vissa fall ska redovisas som inkomst av tjänst hos mottagaren. Det gäller t.ex. när det rör sig enstaka konstnärligt, litterärt eller vetenskapligt arbete. Royaltyn eller avgiften ska då i stället redovisas på KU10.;;;
+KU71;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU71;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU71;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU71;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU71;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU71;210;Rattelse;N;Kryss;;;;;;;;
+KU71;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU71;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU71;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU71;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU71;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU71;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU71;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU71;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU71;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU71;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU71;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU71;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU71;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU71;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU71;740;Kontoslag;N;Kontoslag;124;Om Fk205 saknas ska Fk740 finnas.;Kontrolluppgiften avser uttag från;;;;;
+KU71;743;OverlatPantOvertag;N;Kryss;;;Överlåtelse, pantsättning eller övertagande av kontomedel;;Om det är känt för uppgiftslämnaren om det träffats ett avtal om överlåtelse eller pantsättning av medel på skogskonto, skogsskadekonto eller upphovsmannakonto, eller om medel på sådana konton har övertagits, ska uppgift lämnas genom en markering här.;;;
+KU71;744;UtbetaltBelopp;N;Belopp10;125;Om Fk205 saknas ska Fk744 finnas.;Utbetalt belopp;;Här redovisas uppgift om uttaget eller utbetalt belopp. Om uttag har gjorts från olika konton, ska en kontrolluppgift per konto lämnas.;;;
+KU72;076;LandskodTIN;N;Landskod;045;Om Fk252 finns ska Fk076 finnas.;TIN-land;Inkomsttagare;I de fall utländskt skatteregistreringsnummer (TIN) lämnas ska uppgift även lämnas om vilket land som utfärdat numret.;;;
+KU72;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU72;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU72;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU72;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU72;210;Rattelse;N;Kryss;;;;;;;;
+KU72;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU72;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU72;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU72;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU72;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU72;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU72;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU72;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU72;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU72;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU72;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU72;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU72;252;TIN;N;Text20;066;Om Fk076 finns ska Fk252 finnas.;Utländskt skatteregistreringsnummer (TIN);Inkomsttagare;Utländskt skatteregistreringsnummer, TIN (Tax Identification Number), ska alltid lämnas för person som är obegränsat skattskyldig i Sverige och har hemvist i annan stat. Personen, som uppgiften avser, får skatteregistreringsnumret av det land där han eller hon har sin skatterättsliga hemvist.;;;
+KU72;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU72;740;Kontoslag;N;Kontoslag;124;Om Fk205 saknas ska Fk740 finnas.;Kontrolluppgiften avser insättning på;;;;;
+KU72;745;InsattBelopp;N;Belopp10;141;Om Fk205 saknas ska Fk745 finnas.;Insatt belopp;;Här redovisas insatt belopp. Om insättning gjorts på flera olika konton får avdrag bara göras för insättningen hos det först anlitade kreditinstitutet. ;;;
+KU72;746;DatumInsattning;N;Datum;126,127;"Om Fk205 saknas ska Fk746 finnas.
+ÅÅÅÅ i Fk746 ska vara = Fk203 eller (ÅÅÅÅ i Fk746 = Fk203+1 och MMDD < 0701).";Datum för insättning;;Insättning ska göras senast den dag som inkomstdeklarationen ska vara inlämnad.;;;
+KU73;201;UppgiftslamnarId;J;Identitet;053;Fk201 får ej vara identisk med Fk215.;Organisationsnummer;Uppgiftslamnare;;;;
+KU73;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU73;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU73;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU73;210;Rattelse;N;Kryss;;;;;;;;
+KU73;215;Inkomsttagare;N;Identitet;056;Fk215 ska finnas om Fk222 och Fk224 saknas.;Personnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU73;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU73;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU73;218;Gatuadress;N;Text50;059,144,152;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU73;219;Postnummer;N;PostNummer;060,145,153;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU73;220;Postort;N;Text50;061,146,154;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk224 finns och Fk205 och Fk215 och Fk222 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU73;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU73;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU73;224;AnnatIDNr;N;Text20;;;Annat ID-nummer;Inkomsttagare;Avser uppgiften en juridisk person som saknar svenskt organisationsnummer ska, som identifikator, Annat ID-nummer anges. Det finns inga formkrav för Annat ID-nummer. ;;;
+KU73;226;OrgNamn;N;Text50;065,151;"Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.
+Fk226 ska finnas om Fk224 finns och Fk205, Fk215, Fk216, Fk217 och Fk222 alla saknas.";Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU73;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU73;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU73;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU73;730;TillgodoUtdelning;N;Belopp10;120;Fk730 ska finnas om Fk205 och Fk732 saknas.;Tillgodoräknad utdelning;;Här redovisas hela utdelningen som tillgodoräknats för delägarfastigheter som ägs av fysiska personer eller dödsbon.;;;
+KU73;731;DelUtdelnSkog;N;Belopp10;121,122;"Fk731 får inte finnas om Fk732 finns. 
+Fk731 får inte vara > Fk730.";Del av utdelningen som kommer från intäkt av skogsbruk;;"Här redovisas del av utdelningen som kommer från intäkt av skogsbruk. Detta har betydelse för näringsfastigheter, eftersom utdelningen i det fallet likställs med intäkt av skogsbruk som delägaren
+själv bedrivit.";;;
+KU73;732;SkplDelKapital;N;Belopp10;123;Fk732 får inte finnas om Fk730 finns.;Delägarens skattepliktiga andel i samfällighetens inkomster som är avkastning på kapital;;"Här redovisas fastighetens andel av samfällighetens avkastning av kapital, d.v.s. ränta, utdelning och liknande, och endast till den del denna överstiger 600 kr. Kontrolluppgiften ska bara lämnas för
+privatbostadsfastigheter.";;;
+KU80;201;UppgiftslamnarId;J;Identitet;;;Organisationsnummer;Uppgiftslamnare;;;;
+KU80;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU80;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU80;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU80;210;Rattelse;N;Kryss;;;;;;;;
+KU80;215;Inkomsttagare;N;Identitet;181;Fk215 ska finnas om Fk222 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU80;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU80;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU80;218;Gatuadress;N;Text50;059,144;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU80;219;Postnummer;N;PostNummer;060,145;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU80;220;Postort;N;Text50;061,146;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU80;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU80;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU80;226;OrgNamn;N;Text50;065;Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.;Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU80;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU80;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU80;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU80;660;Belopp;N;Belopp12;109;Om Fk205 saknas ska Fk660 finnas.;Belopp i den aktuella valutan;;Här redovisas betalningens belopp i använd valuta. Vid delbetalning ska kontrolluppgift lämnas även om den enskilda betalningen understiger gränsen 150 000 kr.;;;
+KU80;662;LandskodBetalning;N;Landskod;111;Om Fk205 saknas ska Fk662 finnas.;Land;;Ange vilket land betalningen kommer från.;;;
+KU80;663;Betalningsdatum;N;Datum;112,138;"Om Fk205 saknas ska Fk663 finnas. 
+ÅÅÅÅ i Fk663 ska vara = Fk203.";Betalningsdatum;;;;;
+KU80;664;Valutakod;N;Valutakod;113;Om Fk205 saknas ska Fk664 finnas.;Valutakod;;Ange valutakod om beloppet inte anges i svenska kronor.;;;
+KU81;201;UppgiftslamnarId;J;Identitet;;;Organisationsnummer;Uppgiftslamnare;;;;
+KU81;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslamnare;;;;
+KU81;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KU81;205;Borttag;N;Kryss;055;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk570, Fk215, Fk222 och Fk224 är tomma.;Borttags-KU;;;;;
+KU81;210;Rattelse;N;Kryss;;;;;;;;
+KU81;215;Inkomsttagare;N;Identitet;181;Fk215 ska finnas om Fk222 saknas.;Person-/organisationsnummer;Inkomsttagare;Fyll i personnummer eller samordningsnummer för fysisk person eller organisationsnummer för juridisk person. För personer med samordningsnummer ska namn- och adressuppgifter skrivas i fält 216-221.;;;
+KU81;216;Fornamn;N;Text50;057,142;"Fk216 ska finnas om Fk222 finns och Fk205 saknas.
+Fk216 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Förnamn;Inkomsttagare;;;;
+KU81;217;Efternamn;N;Text50;058,143;"Fk217 ska finnas om Fk222 finns och Fk205 saknas.
+Fk217 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas.";Efternamn;Inkomsttagare;;;;
+KU81;218;Gatuadress;N;Text50;059,144;"Fk218 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk218 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.";Gatuadress;Inkomsttagare;;;;
+KU81;219;Postnummer;N;PostNummer;060,145;"Fk219 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk219 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.";Postnummer;Inkomsttagare;Anges utan ev. landskod. Land anges istället i fält 221 nedan.;;;
+KU81;220;Postort;N;Text50;061,146;"Fk220 ska finnas om Fk222 finns och Fk205 saknas och Fk230 saknas.
+Fk220 ska finnas om Fk215 har värde i SSÅÅ > 1800 och DD > 60 och Fk205 saknas och Fk230 saknas.";Postort;Inkomsttagare;;;;
+KU81;221;LandskodPostort;N;Landskod;166;Fk221 ska finnas om Fk230 finns;Land;Inkomsttagare;;;;
+KU81;222;Fodelsetid;N;Fodelsetid;063;Om Fk215 finns får inte Fk222 finnas.;Födelsetid;Inkomsttagare;Har personen som uppgiften avser inget personnummer finns möjligheten att ange födelsetid istället. Födelsetiden anges med personens födelsedatum på samma sätt som i ett personnummer följt av tre valfria siffror (ÅÅÅÅMMDDnnn).;;;
+KU81;226;OrgNamn;N;Text50;065;Fk226 får inte finnas om Fk222 finns, om Fk215 har SS>17, om Fk216 finns eller om Fk217 finns.;Organisationsnamn;Inkomsttagare;Anges för juridisk person istället för för- och efternamn.;;;
+KU81;228;Gatuadress2;N;Text50;;;Gatuadress forts.;Inkomsttagare;Om du behöver mer utrymme för gatuadress, t.ex. för en c/o-adress.;;;
+KU81;230;FriAdress;N;Text350;;;Adress i fritt format;Inkomsttagare;Om en utländsk adress inte går att dela in i gatuadress, postnummer och postort kan detta fält istället användas.;;;
+KU81;570;Specifikationsnummer;J;SpecifikationsNummer;;;Specifikationsnummer;;Ska alltid anges. Kan vara valfritt nummer, men lämnar du fler kontrolluppgifter av samma KU-typ för samma person måste de ha olika specifikationsnummer. Vill du senare kunna ändra eller ta bort en kontrolluppgift måste du då ange samma specifikationsnummer som nu.;;;
+KU81;660;Belopp;N;Belopp12;109;Om Fk205 saknas ska Fk660 finnas.;Belopp i den aktuella valutan;;Här redovisas betalningens belopp i använd valuta. Vid delbetalning ska kontrolluppgift lämnas även om den enskilda betalningen understiger gränsen 150 000 kr.;;;
+KU81;661;Betalningskod;N;Betalkod;110;Om Fk205 saknas ska Fk661 finnas.;Betalningskod;;Här anges vad betalningen avser.;;;
+KU81;662;LandskodBetalning;N;Landskod;111;Om Fk205 saknas ska Fk662 finnas.;Land;;Här anges till vilket land betalningen gjorts.;;;
+KU81;663;Betalningsdatum;N;Datum;112,138;"Om Fk205 saknas ska Fk663 finnas. 
+ÅÅÅÅ i Fk663 ska vara = Fk203.";Betalningsdatum;;;;;
+KU81;664;Valutakod;N;Valutakod;113;Om Fk205 saknas ska Fk664 finnas.;Valutakod;;Ange valutakod om beloppet inte anges i svenska kronor.;;;
+KU81;671;NamnBetalningsmottagare;N;Text36;114;Om Fk205 saknas ska Fk671 finnas.;Namn på betalningsmottagare;;;;;
+KupongS;000;NamnKPerson;N;Text50;;;;;;;;
+KupongS;000;TelefonKPerson;N;Text20;;;;;;;;
+KupongS;000;EpostKPerson;N;Epost;;;;;;;;
+KupongS;000;Namnfortydligande;N;Text50;;;;;;;;
+KupongS;201;UppgiftslamnarId;J;Identitet;;;Organisationsnummer;Uppgiftslämnare;;;;
+KupongS;202;NamnUppgiftslamnare;N;Text50;;;Uppgiftslämnarens namn;Uppgiftslämnare;;;;
+KupongS;203;Inkomstar;J;Inkomstar;;;Inkomstår;;;;;
+KupongS;205;Borttag;N;Kryss;161;Fk205 får bara finnas om alla fältkoder förutom Fk201, Fk203, Fk572, Fk851 och Fk890 är tomma.;Denna redovisning tar bort tidigare inlämnad redovisning;;Om redovisningen ska tas bort helt och hållet ska denna ruta kryssas i.;;;
+KupongS;571;VPNamn;N;Text50;;;Namn på aktien;;;;;
+KupongS;572;ISIN;N;Isin;165;Exakt en av Fk572 eller Fk890 måste finnas.;ISIN;;Värdepapperets identitetsnummer enligt internationell standard. Anges i form av landskod (två stora bokstäver) följt av 10 tecken. För svenska värdepapper är det 10 siffror. Ex SE0000667925.;;;
+KupongS;851;Redovisningsnummer;J;Text10;;;Redovisningsnummer;;Anges i siffror, bokstäver eller kombination av båda. Ett redovisningsnummer måste alltid anges och ska vara unikt för just den redovisade utdelningen.;;;
+KupongS;853;Avstamningsdag;N;Datum;;;Avstämningsdag;;Avstämningsdagen är lika med utdelningstillfället.;;;
+KupongS;854;NummerAterbetalning;N;Text13;;;Plusgiro-/bankgironummer för eventuell återbetalning;;Anges i de fall för hög kupongskatt redovisats och betalats in och återbetalning önskas genom en rättelse av redovisning.;;;
+KupongS;855;Insattningsdatum;N;Datum;;;Belopp i ruta 883 insatt på Skatteverkets plusgiro 1 60 90-3 den (datum);;;;;
+KupongS;860;UtdelningEjSkSkKSkatt;N;BeloppNeg12;171;Fk860 ska finnas om Fk205 saknas;A. Utdelning utan skattskyldighet för kupongskatt;;Här ska den delen av utdelningen redovisas som det inte innehållits någon kupongskatt för. Det kan t.ex. vara utdelning som gått till svenska fysiska personer/dödsbon efter sådana, eller till svenska juridiska personer.;;;
+KupongS;861;UtdelningNollProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 0 procent kupongskatt;;;;;
+KupongS;862;UtdelningFemProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 5 procent kupongskatt;;;;;
+KupongS;863;UtdelningTioProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 10 procent kupongskatt;;;;;
+KupongS;864;UtdelningFemtonProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 15 procent kupongskatt;;;;;
+KupongS;865;UtdelningTjugoProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 20 procent kupongskatt;;;;;
+KupongS;866;UtdelningTjugofemProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 25 procent kupongskatt;;;;;
+KupongS;867;UtdelningTrettioProcKSkatt;N;BeloppNeg12;;;Utdelning, kr, 30 procent kupongskatt;;;;;
+KupongS;869;SaUtdelningAB;N;BeloppNeg12;;;Utdelning, Summa A och B;;;;;
+KupongS;872;KSkattFemProc;N;BeloppNeg12;;;5 procent kupongskatt;;;;;
+KupongS;873;KSkattTioProc;N;BeloppNeg12;;;10 procent kupongskatt;;;;;
+KupongS;874;KSkattFemtonProc;N;BeloppNeg12;;;15 procent kupongskatt;;;;;
+KupongS;875;KSkattTjugoProc;N;BeloppNeg12;;;20 procent kupongskatt;;;;;
+KupongS;876;KSkattTjugofemProc;N;BeloppNeg12;;;25 procent kupongskatt;;;;;
+KupongS;877;KSkattTrettioProc;N;BeloppNeg12;;;30 procent kupongskatt;;;;;
+KupongS;879;SaKSkattAB;N;BeloppNeg12;;;Kupongskatt, Summa A och B;;;;;
+KupongS;881;SaTidigareRedUtdelning;N;Belopp12;;;Summa tidigare redovisad utdelning för inkomståret;;;;;
+KupongS;882;TotalsummaUtdelning;N;BeloppNeg12;;;Utdelning, kr, TOTALSUMMA;;;;;
+KupongS;883;TotalsummaKSkatt;N;BeloppNeg12;;;Kupongskatt, kr, TOTALSUMMA;;Här summeras all kupongskatt i en totalsumma, dvs. alla de belopp under de olika procentkategorierna. ;;;
+KupongS;884;UtdFranEuroclear;N;Belopp12;;;Från Euroclear erhållen utdelning;;Här anges den totala summan som erhållits från Euroclear.;;;
+KupongS;890;OrgnrUtdelandeBolag;N;Identitet;;;Organisationsnummer utdelande bolag;;Om uppgift om utdelningen saknas på värdepappersnivå kan utdelningen redovisas på bolagsnivå. Då redovisas organisationsnummer för utdelande bolag istället för ISIN. Både ISIN och organisationsnummer kan inte anges.;;;
