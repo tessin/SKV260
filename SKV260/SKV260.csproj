@@ -138,6 +138,18 @@
     <None Include="files\kontrolluppgifter_7.0\komponent\Kontrolluppgifter_COMPONENT_7.0.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="files\kontrolluppgifter_8.0\Bilaga 1 - Fälttyper 8.0.csv" />
+    <None Include="files\kontrolluppgifter_8.0\Bilaga 2b - Blanketter 8.0.csv" />
+    <None Include="files\kontrolluppgifter_8.0\Bilaga 2b - Fältlista 8.0.csv" />
+    <None Include="files\kontrolluppgifter_8.0\instans\Kontrolluppgifter_8.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="files\kontrolluppgifter_8.0\komponent\gemensamt\SKV_COMMON_8.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="files\kontrolluppgifter_8.0\komponent\Kontrolluppgifter_COMPONENT_8.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="files\kontrolluppgifter_3.1\exempelfiler\4.xml" />
@@ -147,6 +159,7 @@
     <Content Include="files\kontrolluppgifter_5.0\instans\Kontrolluppgifter_5.0.xsl" />
     <Content Include="files\kontrolluppgifter_6.0\instans\Kontrolluppgifter_6.0.xsl" />
     <Content Include="files\kontrolluppgifter_7.0\instans\Kontrolluppgifter_7.0.xsl" />
+    <Content Include="files\kontrolluppgifter_8.0\instans\Kontrolluppgifter_8.0.xsl" />
     <Content Include="Kontrolluppgifter\generated.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>generated.cs</LastGenOutput>

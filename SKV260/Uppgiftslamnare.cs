@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using SKV260.Kontrolluppgifter;
 using System.Xml.Linq;
 
 namespace SKV260

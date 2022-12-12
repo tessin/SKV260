@@ -1,7 +1,6 @@
 ﻿using SKV260.Kontrolluppgifter;
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.Globalization;
 
 namespace SKV260
 {

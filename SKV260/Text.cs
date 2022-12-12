@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SKV260
+﻿namespace SKV260
 {
     public struct Text
     {

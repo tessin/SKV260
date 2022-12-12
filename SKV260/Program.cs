@@ -1,5 +1,4 @@
 ﻿using SKV260.Kontrolluppgifter;
-using System;
 using System.Xml.Linq;
 
 namespace SKV260

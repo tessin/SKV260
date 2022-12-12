@@ -20,7 +20,7 @@ namespace SKV260.Kontrolluppgifter
 	// read XML structure from schema file
 	var schema = new Dictionary<string, XElement>();
 	{
-		var c = XElement.Load(Host.ResolvePath(@"..\files\kontrolluppgifter_7.0\komponent\Kontrolluppgifter_COMPONENT_7.0.xsd"));
+		var c = XElement.Load(Host.ResolvePath(@"..\files\kontrolluppgifter_8.0\komponent\Kontrolluppgifter_COMPONENT_8.0.xsd"));
 
 		foreach(var el in c.Elements(xsd + "complexType")) {
 			schema.Add((string)el.Attribute("name"), el);
@@ -29,19 +29,19 @@ namespace SKV260.Kontrolluppgifter
 
 	var blanketter = new Dictionary<string, string>();
 
-	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_7.0\Bilaga 2b - Blanketter 7.0.csv")).Skip(1))
+	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_8.0\Bilaga 2b - Blanketter 8.0.csv")).Skip(1))
 	{
 		blanketter.Add(row[0], row[2]);
 	}
 
 	var ftmap = new Dictionary<string, string>();
 
-	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_7.0\Bilaga 1 - Fälttyper 7.0.csv")))
+	foreach (var row in CSV.ParseFile(Host.ResolvePath(@"..\files\kontrolluppgifter_8.0\Bilaga 1 - Fälttyper 8.0.csv")))
 	{
 		ftmap.Add(row[0], row[1]);
 	}
 
-	var fl = CSV.ParseFile(Host.ResolvePath("../files/kontrolluppgifter_7.0/Bilaga 2b - Fältlista 7.0.csv"));
+	var fl = CSV.ParseFile(Host.ResolvePath("../files/kontrolluppgifter_8.0/Bilaga 2b - Fältlista 8.0.csv"));
 	var flH = fl.First();
 
 	var kuIncludeSet = new HashSet<string>{ "KU20", "KU25", "KU28", "KU31", "KU32" };
